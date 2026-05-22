@@ -40,11 +40,77 @@
         .catalog-link-btn:hover { background-color: #4a3728; }
         .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); display: none; z-index: 999; }
         .overlay.open { display: block; }
+        /* Стили для всплывающего уведомления */
+        .toast-notification {
+            position: fixed;
+            top: 20px;
+            right: -350px; /* По умолчанию скрыто за экраном */
+            background-color: #2e7d32; /* Красивый зеленый цвет */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-weight: bold;
+            z-index: 2000;
+            transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .toast-notification.show {
+            right: 20px; /* Выезжает на экран */
+        }
+        /* Красивое кастомное окно по центру экрана */
+        .custom-alert-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            z-index: 2000;
+            width: 90%;
+            max-width: 420px;
+            text-align: center;
+            display: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .custom-alert-box.show {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            display: block;
+        }
+        .custom-alert-title { font-size: 20px; font-weight: bold; color: #3e2723; margin-bottom: 12px; }
+        .custom-alert-text { font-size: 15px; color: #5d4037; margin-bottom: 20px; line-height: 1.5; }
+        .custom-alert-buttons { display: flex; gap: 12px; justify-content: center; }
+        .custom-alert-btn { padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; border: none; font-size: 15px; flex: 1; }
+        .custom-alert-btn.ok { background-color: #8b5a2b; color: white; }
+        .custom-alert-btn.ok:hover { background-color: #4a3728; }
+        .custom-alert-btn.cancel { background-color: #efebe9; color: #4a3728; border: 2px solid #d7ccc8; }
+        
+        /* Кнопка очистки корзины */
+        .clear-cart-btn { width: 100%; background: none; border: 2px solid #c62828; color: #c62828; padding: 10px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; transition: all 0.2s; }
+        .clear-cart-btn:hover { background: #ffebee; }
+
     </style>
 </head>
 <body>
     <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-    <div class="sidebar" id="sidebar">
+    <!-- Кастомное окно предупреждения по центру -->
+    <div class="overlay" id="alertOverlay" style="z-index: 1999;"></div>
+    <div class="custom-alert-box" id="customAlert">
+        <div class="custom-alert-title">⚠️ Требуется окрас</div>
+        <div class="custom-alert-text" id="customAlertText"></div>
+        <div class="custom-alert-buttons">
+            <button class="custom-alert-btn cancel" onclick="closeCustomAlert()">Закрыть</button>
+            <button class="custom-alert-btn ok" id="customAlertOkBtn">В каталог</button>
+        </div>
+    </div>
+    
+<div class="sidebar" id="sidebar">
         <button class="sidebar-close" onclick="closeSidebar()">×</button>
         <div class="sidebar-img-box"><img id="sidebarImg" src="" alt=""></div>
         <div id="sidebarTitle" class="sidebar-title"></div>
@@ -58,7 +124,16 @@
             <div class="sidebar-section" style="flex: 1; margin-bottom: 0;"><div class="sidebar-section-title">Цена</div><div id="sidebarPrice" class="sidebar-section-content" style="font-weight: bold; color: #2e7d32; border-left-color: #a5d6a7; background-color: #e8f5e9;"></div></div>
         </div>
     </div>
-    <div class="header"><div class="container"><h1>🐴 Lowadi | Kaneri Mio Company</h1></div></div>
+    <div class="header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+        <div style="flex-grow: 1; text-align: center; margin-left: 50px;">
+            <h1>🐴 Lowadi | Kaneri Mio Company</h1>
+        </div>
+        <button onclick="toggleCart()" style="background: #8b5a2b; border: 2px solid #d7ccc8; color: #fff; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 16px;">
+            🛒 Корзина <span id="cartCountBadge" style="background: #c62828; color: #fff; border-radius: 50%; padding: 2px 7px; font-size: 12px;">0</span>
+        </button>
+    </div>
+</div>
     <div class="container">
         <div class="search-box"><input type="text" id="searchInput" class="search-input" placeholder="Поиск по названию предмета..."></div>
         <div class="categories-grid">
@@ -69,21 +144,41 @@
         </div>
         <div class="grid" id="itemsContainer"></div>
     </div>
+<!-- Окно корзины и затемнение -->
+    <div class="overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="sidebar" id="cartSidebar" style="right: -420px;">
+        <button class="sidebar-close" onclick="toggleCart()">×</button>
+        <div class="sidebar-title" style="margin-bottom: 20px;">🛒 Ваша корзина</div>
+        
+        <!-- Список товаров в корзине -->
+        <div id="cartItemsList" style="flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px; padding-right: 5px;">
+            <!-- Товары добавятся сюда автоматически -->
+        </div>
+
+        <!-- Итоговая сумма -->
+        <div class="sidebar-section" style="margin-bottom: 0;">
+            <div class="sidebar-section-title">Итого к оплате</div>
+        <!-- Кнопка очистки корзины -->
+        <button class="clear-cart-btn" onclick="clearCart()">🗑️ Очистить корзину</button>
+
+            <div id="cartTotalPrice" class="sidebar-section-content" style="font-weight: bold; font-size: 20px; color: #2e7d32; background-color: #e8f5e9; border-left-color: #a5d6a7; text-align: center; padding: 15px;">0₽</div>
+        </div>
+    </div>
     <script>
         const items = [
-            { id: 1, name: "Рог Изобилия", category: "black-market", categoryName: "Черный рынок", description: "Открывает множество сокровищ: экю, пропуски, снаряжение и божественных лошадей.", image: "https://i.ibb.co/F4Sh8VMK/corne-abondance.png", count: "5 шт", price: "12₽", source: "Купить на Черном рынке за 100 пропусков, выиграть в акциях, получить за выполнение целей дня." },
-            { id: 2, name: "Золотое Яблоко", category: "golden-apple", categoryName: "ЗЯ", description: "Позволяет выбрать для вашей лошади новую уникальную масть, созданную другими игроками.", image: "https://i.ibb.co/dwtryG3B/pomme-or.png", count: "2 шт", price: "15₽", source: "Приобрести на Черном рынке за 100 пропусков, выиграть в акциях, обмен предметами.", note: "Покупка только навесом" },
-            { id: 3, name: "Кусочек Облака", category: "black-market", categoryName: "Черный рынок", description: "Омолаживает вашу лошадь на 4 месяца и дает 2 очка роста", image: "https://i.ibb.co/qGchCL5/fragment-nuage.png", count: "20 шт", price: "6₽", source: "Покупка на Черном рынке за 95 пропусков, выиграть в акциях, обмен предметами" },
-            { id: 4, name: "Исчезнувшее Золотое Яблоко", category: "vintage-apple", categoryName: "ИЗЯ", description: "Эксклюзивные масти из старых коллекций, которые больше нельзя применить к лошадям в игре.", image: "https://i.ibb.co/prPYD87b/pomme-or-hidden.png", count: "2000+ шт", price: "от 25₽", source: "Невозможно получить напрямую. Преобразуется из Золотого Яблока когда масть достигает лимита использований", },
-            { id: 5, name: "Состязание титанов", category: "black-market", categoryName: "Черный рынок", description: "Открывает уровни с растущими наградами: забирайте призы вовремя или рискуйте всем ради главного приза. В случае неудачи выдаётся награда с 1 уровня", image: "https://i.ibb.co/6cd1ZxVH/defi-titans.png", count: "23 шт", price: "50₽", source: "Покупка на Черном рынке за 100 пропусков, выиграть в акциях, обмен предметами", },
-            { id: 6, name: "Золотое Руно", category: "black-market", categoryName: "Черный рынок", description: "Позволяет испытать удачу: сотрите защитный слой, чтобы выиграть ценные призы или божественную лошадь", image: "https://i.ibb.co/s9j1fp5x/toison-or.png", count: "23 шт", price: "50₽", source: "Покупка на Черном рынке за 200 пропусков, выиграть в акциях, обмен предметами", },
-            { id: 7, name: "Корона Тюхе", category: "black-market", categoryName: "Черный рынок", description: "Дает случайные подарки из доступных категорий", image: "https://i.ibb.co/0p7cxbFw/tyche-crown.png", count: "23 шт", price: "Х ₽", source: "Покупка на Черном рынке за 170 пропусков, выиграть в акциях", },
-            { id: 8, name: "Длани Морфея", category: "black-market", categoryName: "Черный рынок", description: "Выращивайте лошадь без затрат очков роста вплоть до достижения ею 30 лет", image: "https://i.ibb.co/qYc95xyS/bras-morphee.png", count: "23 шт", price: "15₽", source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях, обмен предметов", },
-            { id: 9, name: "Живая Вода", category: "black-market", categoryName: "Черный рынок", description: "Позволяет состарить лошадь на 1 месяц, вместо 2", image: "https://i.ibb.co/tT9K1WzF/eau-jouvence.png", count: "23 шт", price: "12₽", source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях, обмен предметов", },
-            { id: 10, name: "Одеяло Гипноса", category: "black-market", categoryName: "Черный рынок", description: "Лошадь может полноценно отдыхать и восстанавливать силы без регистрации в КСК", image: "https://i.ibb.co/k2vNDdKr/couverture-hypnos.png", count: "23 шт", price: "4₽", source: "Покупка на Черном рынке за 20 пропусков, выиграть в акциях, обмен предметов", },
-            { id: 11, name: "Ласка Филотес", category: "black-market", categoryName: "Черный рынок", description: "Позволяет приласкать лошадь второй раз за день для дополнительного бонуса", image: "https://i.ibb.co/v4yr59Zn/caresse-philotes.png", count: "23 шт", price: "6₽", source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях, обмен предметов", },
-            { id: 12, name: "Медальон Афины", category: "black-market", categoryName: "Черный рынок", description: "Доберитесь до НЛНП 100 без побед в соревнованиях", image: "https://i.ibb.co/dJ4vFVdn/athena-medal.png", count: "23 шт", price: "Х ₽", source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях", },
-            { id: 13, name: "Ящик Пандоры", category: "black-market", categoryName: "Черный рынок", description: "Воскрешает погибшую лошадь в возрасте до 25 лет со всеми ее прошлыми навыками", image: "https://i.ibb.co/5hfTBty0/boite-pandore.png", count: "23 шт", price: "9₽", source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях, обмен предметами", }
+            { id: 1, name: "Рог Изобилия", category: "black-market", categoryName: "Черный рынок", description: "Открывает множество сокровищ: экю, пропуски, снаряжение и божественных лошадей.", image: "https://i.ibb.co/F4Sh8VMK/corne-abondance.png", count: "5 шт", price: "12₽", priceNum: 12, source: "Купить на Черном рынке за 100 пропусков, выиграть в акциях, получить за выполнение целей дня." },
+            { id: 2, name: "Золотое Яблоко", category: "golden-apple", categoryName: "ЗЯ", description: "Позволяет выбрать для вашей лошади новую уникальную масть, созданную другими игроками.", image: "https://i.ibb.co/dwtryG3B/pomme-or.png", count: "2 шт", price: "15₽", priceNum: 15, source: "Приобрести на Черном рынке за 100 пропусков, выиграть в акциях, обмен предметами.", note: "Покупка только навесом" },
+            { id: 3, name: "Кусочек Облака", category: "black-market", categoryName: "Черный рынок", description: "Омолаживает вашу лошадь на 4 месяца и дает 2 очка роста", image: "https://i.ibb.co/qGchCL5/fragment-nuage.png", count: "20 шт", price: "6₽", priceNum: 6, source: "Покупка на Черном рынке за 95 пропусков, выиграть в акциях, обмен предметами" },
+            { id: 4, name: "Исчезнувшее Золотое Яблоко", category: "vintage-apple", categoryName: "ИЗЯ", description: "Эксклюзивные масти из старых коллекций, которые больше нельзя применить к лошадям в игре.", image: "https://i.ibb.co/prPYD87b/pomme-or-hidden.png", count: "2000+ шт", price: "от 25₽", priceNum: 25, source: "Невозможно получить напрямую. Преобразуется из Золотого Яблока когда масть достигает лимита использований", },
+            { id: 5, name: "Состязание титанов", category: "black-market", categoryName: "Черный рынок", description: "Открывает уровни с растущими наградами: забирайте призы вовремя или рискуйте всем ради главного приза. В случае неудачи выдаётся награда с 1 уровня", image: "https://i.ibb.co/6cd1ZxVH/defi-titans.png", count: "23 шт", price: "50₽", priceNum: 50, source: "Покупка на Черном рынке за 100 пропусков, выиграть в акциях, обмен предметами", },
+            { id: 6, name: "Золотое Руно", category: "black-market", categoryName: "Черный рынок", description: "Позволяет испытать удачу: сотрите защитный слой, чтобы выиграть ценные призы или божественную лошадь", image: "https://i.ibb.co/s9j1fp5x/toison-or.png", count: "23 шт", price: "50₽", priceNum: 50, source: "Покупка на Черном рынке за 200 пропусков, выиграть в акциях, обмен предметами", },
+            { id: 7, name: "Корона Тюхе", category: "black-market", categoryName: "Черный рынок", description: "Дает случайные подарки из доступных категорий", image: "https://i.ibb.co/0p7cxbFw/tyche-crown.png", count: "23 шт", price: "Х ₽", priceNum: 0, source: "Покупка на Черном рынке за 170 пропусков, выиграть в акциях", },
+            { id: 8, name: "Длани Морфея", category: "black-market", categoryName: "Черный рынок", description: "Выращивайте лошадь без затрат очков роста вплоть до достижения ею 30 лет", image: "https://i.ibb.co/qYc95xyS/bras-morphee.png", count: "23 шт", price: "15₽", priceNum: 15, source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях, обмен предметов", },
+            { id: 9, name: "Живая Вода", category: "black-market", categoryName: "Черный рынок", description: "Позволяет состарить лошадь на 1 месяц, вместо 2", image: "https://i.ibb.co/tT9K1WzF/eau-jouvence.png", count: "23 шт", price: "12₽", priceNum: 12, source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях, обмен предметов", },
+            { id: 10, name: "Одеяло Гипноса", category: "black-market", categoryName: "Черный рынок", description: "Лошадь может полноценно отдыхать и восстанавливать силы без регистрации в КСК", image: "https://i.ibb.co/k2vNDdKr/couverture-hypnos.png", count: "23 шт", price: "4₽", priceNum: 4, source: "Покупка на Черном рынке за 20 пропусков, выиграть в акциях, обмен предметов", },
+            { id: 11, name: "Ласка Филотес", category: "black-market", categoryName: "Черный рынок", description: "Позволяет приласкать лошадь второй раз за день для дополнительного бонуса", image: "https://i.ibb.co/v4yr59Zn/caresse-philotes.png", count: "23 шт", price: "6₽", priceNum: 6, source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях, обмен предметов", },
+            { id: 12, name: "Медальон Афины", category: "black-market", categoryName: "Черный рынок", description: "Доберитесь до НЛНП 100 без побед в соревнованиях", image: "https://i.ibb.co/dJ4vFVdn/athena-medal.png", count: "23 шт", price: "Х ₽", priceNum: 0, source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях", },
+            { id: 13, name: "Ящик Пандоры", category: "black-market", categoryName: "Черный рынок", description: "Воскрешает погибшую лошадь в возрасте до 25 лет со всеми ее прошлыми навыками", image: "https://i.ibb.co/5hfTBty0/boite-pandore.png", count: "23 шт", price: "9₽", priceNum: 9, source: "Покупка на Черном рынке за ХХ пропусков, выиграть в акциях, обмен предметами", }
         ];
 
         let currentCategory = 'all';
@@ -93,7 +188,7 @@
         function displayItems(filteredItems) {
             container.innerHTML = '';
             if(filteredItems.length === 0) {
-                container.innerHTML = `<div class="no-results">В этом разделе пока ничего не найдено 🐴</div>`;
+                container.innerHTML = '<div class="no-results">В этом разделе пока ничего не найдено 🐴</div>';
                 return;
             }
             filteredItems.forEach(item => {
@@ -104,12 +199,17 @@
                             <span class="badge">${item.categoryName}</span>
                             <div class="card-title">${item.name}</div>
                             <div class="card-text">${item.description}</div>
-                            <div class="card-price-tag">Цена: ${item.price}</div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                <div class="card-price-tag" style="margin-top: 0;">Цена: ${item.price}</div>
+<button onclick="event.stopPropagation(); addToCart(${item.id})" style="background: #2e7d32; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 42px; height: 34px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></button>
+
+                            </div>
                         </div>
                         <div class="card-footer">В наличии: <strong>${item.count}</strong></div>
                     </div>`;
             });
         }
+
 
         function openSidebar(id) {
             const item = items.find(i => i.id === id);
@@ -169,6 +269,220 @@
             buttonElement.classList.add('active');
             filterData();
         }
+
+        searchInput.addEventListener('input', filterData);
+        displayItems(items);
+        // ЛОГИКА РАБОТЫ КОРЗИНЫ
+        let cart = [];
+
+        function toggleCart() {
+            const cartSidebar = document.getElementById('cartSidebar');
+            const cartOverlay = document.getElementById('cartOverlay');
+            if (cartSidebar.style.right === '0px') {
+                cartSidebar.style.right = '-420px';
+                cartOverlay.style.display = 'none';
+            } else {
+                cartSidebar.style.right = '0px';
+                cartOverlay.style.display = 'block';
+                renderCart();
+            }
+        }
+
+        function addToCart(id) {
+            const item = items.find(i => i.id === id);
+            if (!item) return;
+
+            // ПРОВЕРКА: Если это ЗЯ или ИЗЯ, просим перейти в каталог
+            if (item.category === 'golden-apple') {
+                if (confirm(`Предмет "${item.name}" продаётся только навесом.\nПожалуйста, выберите окрас из каталога.\n\nНажмите "OK", чтобы перейти в каталог ЗЯ, или "Отмена", чтобы закрыть.`)) {
+                    window.location.href = 'catalog-zy.html';
+                }
+                return;
+            }
+            if (item.category === 'vintage-apple') {
+                if (confirm(`Предмет "${item.name}" продаётся только навесом.\nПожалуйста, выберите окрас из каталога.\n\nНажмите "OK", чтобы перейти в каталог ИЗЯ, или "Отмена", чтобы закрыть.`)) {
+                    window.location.href = 'catalog-izzy.html';
+                }
+                return;
+            }
+
+            // Загружаем актуальную корзину из памяти браузера
+            cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
+
+            const cartItem = cart.find(i => i.id === id && !i.isCoat);
+            if (cartItem) {
+                cartItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: item.id,
+                    name: item.name,
+                    price: item.priceNum || parseInt(item.price) || 0,
+                    image: item.image,
+                    quantity: 1,
+                    isCoat: false
+                });
+            }
+            
+            // Сохраняем в память и обновляем экран
+            localStorage.setItem('lowadi_cart', JSON.stringify(cart));
+            updateCartBadge();
+localStorage.setItem('lowadi_cart', JSON.stringify(cart));
+
+            let toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.innerHTML = `🛒 Предмет "${item.name}" добавлен в корзину!`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        // ЛОГИКА ДОБАВЛЕНИЯ ТОВАРА С ПРОВЕРКОЙ КАТАЛОГОВ ЗЯ / ИЗЯ
+        // Показ красивого окна по центру
+        function showCustomAlert(text, targetUrl) {
+            document.getElementById('customAlertText').innerText = text;
+            document.getElementById('alertOverlay').style.display = 'block';
+            const alertBox = document.getElementById('customAlert');
+            alertBox.style.display = 'block';
+            setTimeout(() => alertBox.classList.add('show'), 10);
+            
+            document.getElementById('customAlertOkBtn').onclick = function() {
+                closeCustomAlert();
+                window.location.href = targetUrl;
+            };
+        }
+
+        function closeCustomAlert() {
+            const alertBox = document.getElementById('customAlert');
+            alertBox.classList.remove('show');
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+                document.getElementById('alertOverlay').style.display = 'none';
+            }, 300);
+        }
+
+        // Обновленная функция добавления в корзину
+        function addToCart(id) {
+            const item = items.find(i => i.id === id);
+            if (!item) return;
+
+            // Используем кастомное красивое окно вместо старого confirm
+            if (item.category === 'golden-apple') {
+                showCustomAlert(`Предмет "${item.name}" продаётся только навесом.\nПожалуйста, выберите окрас из каталога.`, 'catalog-zy.html');
+                return;
+            }
+            if (item.category === 'vintage-apple') {
+                showCustomAlert(`Предмет "${item.name}" продаётся только навесом.\nПожалуйста, выберите окрас из каталога.`, 'catalog-izzy.html');
+                return;
+            }
+
+            cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
+            const cartItem = cart.find(i => i.id === id && !i.isCoat);
+            if (cartItem) {
+                cartItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: item.id,
+                    name: item.name,
+                    price: item.priceNum || parseInt(item.price) || 0,
+                    image: item.image,
+                    quantity: 1,
+                    isCoat: false
+                });
+            }
+            
+            saveCartData();
+
+            let toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.innerHTML = `🛒 Предмет "${item.name}" добавлен в корзину!`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        // Функция полной очистки корзины
+        function clearCart() {
+            if (cart.length === 0) return;
+            if (confirm("Вы уверены, что хотите полностью очистить корзину? 🗑️")) {
+                cart = [];
+                saveCartData();
+                renderCart();
+            }
+        }
+
+        // Изменение количества (+ и -) внутри корзины
+        function changeQuantity(id, delta) {
+            const cartItem = cart.find(i => i.id == id);
+            if (!cartItem) return;
+
+            cartItem.quantity += delta;
+            if (cartItem.quantity <= 0) {
+                cart = cart.filter(i => i.id != id);
+            }
+            
+            saveCartData();
+            renderCart();
+        }
+
+        // Сохранение данных корзины в память браузера
+        function saveCartData() {
+            localStorage.setItem('lowadi_cart', JSON.stringify(cart));
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCountBadge').innerText = totalCount;
+        }
+
+        // Отрисовка элементов внутри корзины
+        function renderCart() {
+            const listContainer = document.getElementById('cartItemsList');
+            listContainer.innerHTML = '';
+            let totalSum = 0;
+
+            if (cart.length === 0) {
+                listContainer.innerHTML = '<div style="text-align:center; color:#757575; margin-top:40px;">Корзина пока пуста 🐴</div>';
+                document.getElementById('cartTotalPrice').innerText = '0₽';
+                return;
+            }
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                totalSum += itemTotal;
+
+                const descriptionText = item.isCoat 
+                    ? `<div style="font-size: 12px; color: #8d6e63; margin-top: 2px;">Окрас: <strong>${item.coatName}</strong><br>Автор: <strong>${item.coatAuthor}</strong></div>`
+                    : '';
+
+                listContainer.innerHTML += `
+                    <div style="display: flex; align-items: center; gap: 15px; background: #fafafa; padding: 10px; border-radius: 8px; border: 1px solid #efebe9;">
+                        <img src="${item.image}" style="width: 50px; height: 50px; object-fit: contain;">
+                        <div style="flex-grow: 1;">
+                            <div style="font-weight: bold; font-size: 14px; color: #3e2723;">${item.name}</div>
+                            ${descriptionText}
+                            <div style="font-size: 15px; font-weight: bold; color: #2e7d32; margin-top: 4px;">${itemTotal}₽</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #d7ccc8; border-radius: 6px; padding: 2px 5px;">
+                            <button onclick="changeQuantity('${item.id}', -1)" style="background: none; border: none; font-size: 16px; cursor: pointer; font-weight: bold; color: #757575;">-</button>
+                            <span style="font-weight: bold; font-size: 14px; min-width: 15px; text-align: center;">${item.quantity}</span>
+                            <button onclick="changeQuantity('${item.id}', 1)" style="background: none; border: none; font-size: 16px; cursor: pointer; font-weight: bold; color: #757575;">+</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('cartTotalPrice').innerText = totalSum + '₽';
+        }
+
+        // Восстановление корзины при перезагрузке страницы или возврате из каталогов
+        window.addEventListener('load', () => {
+            cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCountBadge').innerText = totalCount;
+        });
 
         searchInput.addEventListener('input', filterData);
         displayItems(items);

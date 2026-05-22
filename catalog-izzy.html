@@ -47,7 +47,7 @@
         function displayCoats(filteredCoats) {
             const container = document.getElementById('coatsContainer'); container.innerHTML = '';
             if(filteredCoats.length === 0) { container.innerHTML = `<div class="no-results">Масти не найдены 🐴</div>`; return; }
-            filteredCoats.forEach(coat => {
+            filteredCoats.forEach((coat, index) => {
                 const copiesText = coat.copies === 'unlimited' ? 'Безлимитные' : coat.copies + ' шт.';
                 container.innerHTML += `
                     <div class="coat-card">
@@ -58,11 +58,15 @@
                             <div class="coat-detail">Вид: <strong>${coat.type}</strong></div>
                             <div class="coat-detail">Копии: <strong>${copiesText}</strong></div>
                             <div class="coat-detail">В наличии: <strong>${coat.count}</strong></div>
-                            <div class="coat-price">Цена: ${coat.price}</div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                <div class="coat-price" style="margin-top:0;">Цена: ${coat.price}</div>
+                                <button onclick="addCoatToCart(${index}, 'ИЗЯ', 'https://ibb.co')" style="background: #2e7d32; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px;">+ В корзину</button>
+                            </div>
                         </div>
                     </div>`;
             });
         }
+
 
         function filterCoats() {
             const fTitle = document.getElementById('searchTitle').value.toLowerCase();
@@ -84,6 +88,30 @@
         document.getElementById('filterType').addEventListener('change', filterCoats);
         document.getElementById('filterCopies').addEventListener('change', filterCoats);
         displayCoats(coats);
+        function addCoatToCart(index, parentName, parentImg) {
+            const coat = coats[index];
+            let localCart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
+
+            const existItem = localCart.find(i => i.isCoat && i.coatName === coat.name && i.coatAuthor === coat.author);
+            if (existItem) {
+                existItem.quantity += 1;
+            } else {
+                localCart.push({
+                    id: 'izzy-' + index + '-' + Date.now(),
+                    name: parentName, // Главная строчка товара: Исчезнувшее золотое яблоко
+                    coatName: coat.name,
+                    coatAuthor: coat.author,
+                    price: parseInt(coat.price) || 0,
+                    image: parentImg,
+                    quantity: 1,
+                    isCoat: true
+                });
+            }
+
+            localStorage.setItem('lowadi_cart', JSON.stringify(localCart));
+            alert(`Окрас "${coat.name}" успешно добавлен к заказу ${parentName}! 🛒`);
+        }
+
     </script>
 </body>
 </html>
