@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Каталог мастей Золотого Яблока</title>
+    <title>Каталог мастей Золотого Яблока (ЗЯ)</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background-color: #f5efe6; color: #333; padding-bottom: 50px; overflow-x: hidden; }
@@ -10,22 +10,48 @@
         .header-content { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
         .back-btn { color: #fff; text-decoration: none; font-weight: bold; background: #8b5a2b; padding: 10px 16px; border-radius: 8px; font-size: 14px; }
         .back-btn:hover { background: #efebe9; color: #4a3728; }
-        .cart-toggle-btn { background: #8b5a2b; border: 2px solid #d7ccc8; color: #fff; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 16px; }
+        
+        /* Кнопки в шапке */
+        .cart-toggle-btn { background: #2e7d32; border: 2px solid #a5d6a7; color: #fff; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 16px; }
+        .fav-header-btn { background: #e74c3c; border: 2px solid #ff7675; color: #fff; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 16px; }
+        
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .filter-panel { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; border: 1px solid #efebe9; }
+        .filter-panel { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; border: 1px solid #efebe9; }
         .filter-group { display: flex; flex-direction: column; gap: 5px; }
         .filter-group label { font-size: 13px; font-weight: bold; color: #8d6e63; text-transform: uppercase; }
         .filter-control { padding: 10px; border: 2px solid #d7ccc8; border-radius: 6px; font-size: 15px; outline: none; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 25px; }
+        
+        /* Карточки товаров */
         .coat-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column; border: 1px solid #efebe9; }
-        .coat-img { height: 160px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 15px; border-bottom: 1px solid #f5f0eb; }
-        .coat-img img { max-height: 100%; max-width: 100%; object-fit: contain; }
+        .coat-img { height: 160px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 15px; border-bottom: 1px solid #f5f0eb; position: relative; overflow: hidden; }
+        .coat-img img { max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.4s ease; }
+        .coat-card:hover .coat-img img { transform: scale(1.18); }
+        
+        /* Бейджи */
+        .coat-badge { position: absolute; top: 10px; left: 10px; padding: 4px 8px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; color: #ffffff; z-index: 2; pointer-events: none; box-shadow: 0 2px 4px rgba(0,0,0,0.15); }
+        .badge-new { background-color: #2ecc71; }
+        .badge-limited { background-color: #e74c3c; }
+        
+        /* Сердечко */
+        .btn-favorite { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.9); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 3; transition: all 0.2s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.15); padding: 0; }
+        .btn-favorite:hover { transform: scale(1.1); background-color: #ffffff; }
+        .btn-favorite svg { width: 18px; height: 18px; fill: none; stroke: #b2bec3; stroke-width: 2.5; transition: all 0.2s ease; }
+        .btn-favorite.active svg { fill: #e74c3c; stroke: #e74c3c; }
+        
         .coat-info { padding: 20px; flex-grow: 1; }
         .coat-title { font-size: 18px; font-weight: bold; color: #3e2723; margin-bottom: 8px; }
         .coat-detail { font-size: 14px; color: #5d4037; margin-bottom: 4px; }
         .coat-detail strong { color: #8b5a2b; }
         .coat-price { font-size: 16px; font-weight: bold; color: #2e7d32; margin-top: 10px; }
         .no-results { text-align: center; grid-column: 1 / -1; padding: 40px 0; color: #757575; font-size: 18px; }
+        
+        /* Теги/Хэштеги */
+        .tag-chips-container { display: flex; gap: 8px; grid-column: 1 / -1; flex-wrap: wrap; margin-top: 5px; }
+        .tag-chip { background: #efebe9; border: 1px solid #d7ccc8; padding: 5px 12px; border-radius: 15px; font-size: 12px; cursor: pointer; color: #4a3728; font-weight: bold; transition: all 0.2s; }
+        .tag-chip:hover, .tag-chip.active { background: #8b5a2b; color: #fff; border-color: #5d4037; }
+        
+        /* Элементы корзины */
         .sidebar { position: fixed; top: 0; right: -420px; width: 400px; height: 100%; background-color: #fff; box-shadow: -5px 0 25px rgba(0,0,0,0.15); transition: right 0.3s ease; z-index: 1000; padding: 30px; display: flex; flex-direction: column; overflow-y: auto; }
         .sidebar.open { right: 0; }
         .sidebar-close { align-self: flex-end; background: none; border: none; font-size: 35px; color: #757575; cursor: pointer; margin-bottom: 10px; line-height: 0.5; }
@@ -49,90 +75,25 @@
         .overlay.open { display: block; }
         .toast-notification { position: fixed; top: 20px; right: -350px; background-color: #2e7d32; color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-weight: bold; z-index: 2000; transition: right 0.4s ease; }
         .toast-notification.show { right: 20px; }
-        /* --- НОВЫЕ СТИЛИ: ТЕГИ, ЗУМ И СОРТИРОВКА --- */
-        
-        /* Контейнер картинки: прячет лишнее при увеличении */
-        .coat-img {
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Плавное увеличение самой картинки лошади */
-        .coat-img img {
-            transition: transform 0.4s ease;
-        }
-
-        /* Эффект зума при наведении мышки на карточку */
-        .coat-card:hover .coat-img img {
-            transform: scale(1.18);
-        }
-
-        /* Красивые плашки-теги поверх картинки */
-        .coat-badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            padding: 4px 8px;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            color: #ffffff;
-            z-index: 2;
-            pointer-events: none;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-        }
-
-        .badge-new { background-color: #2ecc71; }       /* Зеленый цвет */
-        .badge-limited { background-color: #e74c3c; }   /* Красный цвет */
-
-        /* Стили для блока кнопок быстрой фильтрации/тегам */
-        .tag-chips-container {
-            display: flex;
-            gap: 8px;
-            grid-column: 1 / -1;
-            flex-wrap: wrap;
-            margin-top: 5px;
-        }
-
-        .tag-chip {
-            background: #efebe9;
-            border: 1px solid #d7ccc8;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            cursor: pointer;
-            color: #4a3728;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-
-        .tag-chip:hover, .tag-chip.active {
-            background: #8b5a2b;
-            color: #fff;
-            border-color: #5d4037;
-        }
     </style>
 </head>
 <body>
     <div class="overlay" id="alertOverlay" style="z-index: 1999;"></div>
+    
     <div class="custom-alert-box" id="customAlert">
-        <div class="custom-alert-title">✉️ Связь с продавцом</div>
+        <div class="custom-alert-title">✉️ Отправка заказа</div>
         <div class="custom-alert-text" id="customAlertText"></div>
         <div class="custom-alert-buttons"><button class="custom-alert-btn cancel" onclick="closeCustomAlert()">Закрыть</button></div>
     </div>
-    <!-- Новое отдельное окно строго для очистки корзины -->
+    
     <div class="custom-alert-box" id="clearCartAlert">
         <div class="custom-alert-title">🗑️ Очистка корзины</div>
         <div class="custom-alert-text">Вы уверены, что хотите полностью очистить корзину? 🗑️</div>
-        <div class="custom-alert-buttons">
-            <button class="custom-alert-btn cancel" onclick="closeClearCartAlert()">Отмена</button>
-            <button class="custom-alert-btn" onclick="confirmClearCart()" style="background-color:#c62828; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer; flex:1;">Очистить</button>
-        </div>
+        <div class="custom-alert-buttons"><button class="custom-alert-btn cancel" onclick="closeClearCartAlert()">Отмена</button><button class="custom-alert-btn" onclick="confirmClearCart()" style="background-color:#c62828; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer; flex:1;">Очистить</button></div>
     </div>
-
+    
     <div class="overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    
     <div class="sidebar" id="cartSidebar">
         <button class="sidebar-close" onclick="toggleCart()">×</button>
         <div class="sidebar-title">🛒 Ваша корзина</div>
@@ -146,20 +107,25 @@
             <button class="cart-checkout-btn" onclick="checkoutOrder()">📦 Приобрести</button>
         </div>
     </div>
+
     <div class="header">
         <div class="header-content">
             <a href="index.html" class="back-btn">← К вещам</a>
             <h2>Каталог окрасов Золотого Яблока (ЗЯ)</h2>
-            <button onclick="toggleCart()" class="cart-toggle-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg> Корзина <span id="cartCountBadge" style="background: #c62828; color: #fff; border-radius: 50%; padding: 2px 7px; font-size: 12px;">0</span></button>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <!-- Кнопка Избранного сверху справа в шапке -->
+<a href="favorites.html" class="fav-header-btn" style="text-decoration: none;">❤️ Избранное</a>
+                <button onclick="toggleCart()" class="cart-toggle-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg> Корзина <span id="cartCountBadge" style="background: #c62828; color: #fff; border-radius: 50%; padding: 2px 7px; font-size: 12px;">0</span></button>
+            </div>
         </div>
     </div>
+
     <div class="container">
+        <!-- Панель фильтров для ЗЯ без копий -->
         <div class="filter-panel">
             <div class="filter-group"><label>Название масти</label><input type="text" id="searchTitle" class="filter-control" placeholder="Название..."></div>
             <div class="filter-group"><label>Автор</label><input type="text" id="searchAuthor" class="filter-control" placeholder="Никнейм..."></div>
             <div class="filter-group"><label>Вид лошади</label><select id="filterType" class="filter-control"><option value="all">Все виды</option><option value="верховая">Верховая лошадь</option><option value="пегас">Пегас</option><option value="единорог">Единорог</option><option value="пони">Пони</option><option value="осел">Осел</option></select></div>
-            
-            <!-- Добавили сортировку (без копий) -->
             <div class="filter-group">
                 <label>Сортировка</label>
                 <select id="sortControl" class="filter-control">
@@ -169,18 +135,17 @@
                     <option value="rare">Редкие (Мало в наличии)</option>
                 </select>
             </div>
-
-            <!-- Добавили быстрый кликабельный поиск по ключевым словам -->
             <div class="tag-chips-container">
                 <span class="tag-chip active" onclick="selectTag('all', this)">Все темы</span>
                 <span class="tag-chip" onclick="selectTag('готика', this)">#готика</span>
                 <span class="tag-chip" onclick="selectTag('милый', this)">#милый</span>
                 <span class="tag-chip" onclick="selectTag('животные', this)">#животные</span>
+                <span class="tag-chip" id="favTagChip" onclick="selectTag('favorites', this)" style="border-color: #e74c3c; color: #c62828;">❤️ Моё избранное</span>
             </div>
         </div>
-
         <div class="grid" id="coatsContainer"></div>
     </div>
+    
     <script>
         // 1. БАЗА ДАННЫХ ЗОЛОТОГО ЯБЛОКА (ЗЯ)
         const coats = [
@@ -191,10 +156,10 @@
                 type: "единорог", 
                 price: "15₽", 
                 count: "2 шт", 
-                image: "https://i.ibb.co/yFF0Sgzp/100105561-normal.png",
+                image: "https://ibb.co",
                 status: "new", 
                 tags: ["милый", "животные"],
-                views: 28 // Число просмотров для фильтра "Горячее"
+                views: 28 
             },
             { 
                 id: "zy_002",
@@ -211,9 +176,9 @@
         ];
 
         let cart = [];
-        let selectedTag = 'all'; // Текущий выбранный хэштег
+        let selectedTag = 'all'; 
 
-        // 2. ОТРИСОВКА КАРТОЧЕК В КОНТЕЙНЕР
+        // 2. ОТРИСОВКА КАРТОЧЕК С УЧЕТОМ ИЗБРАННОГО СВЕРХУ
         function displayCoats(filteredCoats) {
             const container = document.getElementById('coatsContainer'); 
             container.innerHTML = '';
@@ -222,9 +187,10 @@
                 container.innerHTML = '<div class="no-results">Масти не найдены 🐴</div>'; 
                 return; 
             }
+
+            const favorites = JSON.parse(localStorage.getItem('lowadi_favorites')) || [];
             
             filteredCoats.forEach((coat) => {
-                // Логика отображения тегов (New / Limited)
                 let badgeHTML = '';
                 if (coat.status === 'new') {
                     badgeHTML = '<span class="coat-badge badge-new">New</span>';
@@ -232,13 +198,19 @@
                     badgeHTML = '<span class="coat-badge badge-limited">Limited</span>';
                 }
 
+                const isFav = favorites.includes(coat.id);
+                const favClass = isFav ? 'active' : '';
                 const originalIndex = coats.findIndex(c => c.name === coat.name && c.author === coat.author);
 
-                // Строим карточку БЕЗ строки с копиями, так как в ЗЯ их нет
                 container.innerHTML += `
                     <div class="coat-card">
                         <div class="coat-img">
                             ${badgeHTML}
+                            <button class="btn-favorite ${favClass}" onclick="toggleFavorite('${coat.id}', this)" title="В избранное">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
                             <img src="${coat.image}">
                         </div>
                         <div class="coat-info">
@@ -256,46 +228,84 @@
                     </div>`;
             });
         }
-        // 3. УМНЫЙ ФИЛЬТР + СОРТИРОВКА + ПОИСК ПО ТЕГАМ (БЕЗ КОПИЙ)
+        // 3. УМНЫЙ ФИЛЬТР + СОРТИРОВКА + ПОИСК ПО ТЕГАМ И ИЗБРАННОМУ (БЕЗ КОПИЙ)
         function filterCoats() {
             const fTitle = document.getElementById('searchTitle').value.toLowerCase();
             const fAuthor = document.getElementById('searchAuthor').value.toLowerCase();
             const fType = document.getElementById('filterType').value;
             const sortBy = document.getElementById('sortControl').value;
+            
+            const favorites = JSON.parse(localStorage.getItem('lowadi_favorites')) || [];
 
-            // Фильтруем список по названию, автору, виду лошади и хэштегу
             let res = coats.filter(c => {
                 const matchesTitle = c.name.toLowerCase().includes(fTitle);
                 const matchesAuthor = c.author.toLowerCase().includes(fAuthor);
                 const matchesType = (fType === 'all' || c.type === fType);
-                const matchesTag = (selectedTag === 'all' || (c.tags && c.tags.includes(selectedTag)));
+                
+                let matchesTag = false;
+                if (selectedTag === 'all') {
+                    matchesTag = true;
+                } else if (selectedTag === 'favorites') {
+                    matchesTag = favorites.includes(c.id);
+                } else {
+                    matchesTag = (c.tags && c.tags.includes(selectedTag));
+                }
 
                 return matchesTitle && matchesAuthor && matchesType && matchesTag;
             });
 
-            // Применяем выбранный режим сортировки
             if (sortBy === 'new') {
-                // Новинки (status: "new") поднимаем на самый верх каталога
                 res.sort((a, b) => (b.status === 'new') - (a.status === 'new'));
             } else if (sortBy === 'hot') {
-                // Горячее: сортируем по количеству просмотров (views) сверху вниз
                 res.sort((a, b) => b.views - a.views);
             } else if (sortBy === 'rare') {
-                // Редкие: сортируем по количеству в наличии, где меньше штук — те первее
                 res.sort((a, b) => parseInt(a.count) - parseInt(b.count));
             }
 
             displayCoats(res);
         }
 
-        // Функция переключения активного хэштега при клике
         function selectTag(tag, element) {
             selectedTag = tag;
             document.querySelectorAll('.tag-chip').forEach(chip => chip.classList.remove('active'));
-            element.classList.add('active');
+            if (element) element.classList.add('active');
             filterCoats();
         }
-        // 4. СТАНДАРТНАЯ ЛОГИКА КОРЗИНЫ
+
+        // 4. ДОБАВЛЕНИЕ/УДАЛЕНИЕ ИЗ ИЗБРАННОГО
+        function toggleFavorite(coatId, buttonElement) {
+            let favorites = JSON.parse(localStorage.getItem('lowadi_favorites')) || [];
+            
+            if (favorites.includes(coatId)) {
+                favorites = favorites.filter(id => id !== coatId);
+                buttonElement.classList.remove('active');
+                showToast(`💔 Удалено из избранного`);
+            } else {
+                favorites.push(coatId);
+                buttonElement.classList.add('active');
+                showToast(`❤️ Добавлено в избранное!`);
+            }
+            
+            localStorage.setItem('lowadi_favorites', JSON.stringify(favorites));
+            
+            if (selectedTag === 'favorites') {
+                filterCoats();
+            }
+        }
+
+        function showToast(text) {
+            let toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.style.backgroundColor = '#e74c3c'; 
+            toast.innerHTML = text;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 2500);
+        }
+        // 5. ЛОГИКА РАБОТЫ КОРЗИНЫ И ЧЕКОВ
         function toggleCart() {
             const sidebar = document.getElementById('cartSidebar'); const overlay = document.getElementById('cartOverlay');
             if (sidebar.classList.contains('open')) { sidebar.classList.remove('open'); overlay.classList.remove('open'); } 
@@ -308,7 +318,7 @@
             if (existItem) { existItem.quantity += 1; } 
             else { cart.push({ id: 'zy-' + index + '-' + Date.now(), name: parentName, coatName: coat.name, coatAuthor: coat.author, price: parseInt(coat.price) || 0, image: coat.image, quantity: 1, isCoat: true }); }
             localStorage.setItem('lowadi_cart', JSON.stringify(cart)); updateCartBadge();
-            let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.innerHTML = `🛒 Окрас "${coat.name}" добавлен к заказу ${parentName}!`; document.body.appendChild(toast);
+            let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.innerHTML = `🛒 Окрас "${coat.name}" добавлен к заказазу ${parentName}!`; document.body.appendChild(toast);
             setTimeout(() => toast.classList.add('show'), 100); setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 3000);
         }
 
@@ -358,14 +368,18 @@
             document.getElementById('cartTotalPrice').innerText = totalSum + '₽';
         }
 
-        // 5. НАВЕШИВАНИЕ СЛУШАТЕЛЕЙ ДЛЯ СТРАНИЦЫ ЗЯ
-        window.addEventListener('load', () => { cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; updateCartBadge(); });
+        // 6. ЗАПУСК И СЛУШАТЕЛИ СОБЫТИЙ
+        window.addEventListener('load', () => { 
+            cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; 
+            updateCartBadge(); 
+        });
+
         document.getElementById('searchTitle').addEventListener('input', filterCoats);
         document.getElementById('searchAuthor').addEventListener('input', filterCoats);
         document.getElementById('filterType').addEventListener('change', filterCoats);
-        document.getElementById('sortControl').addEventListener('change', filterCoats); // Слушатель сортировки
+        document.getElementById('sortControl').addEventListener('change', filterCoats);
         
-        displayCoats(coats);
+        filterCoats();
     </script>
 </body>
 </html>
