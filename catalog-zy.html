@@ -343,7 +343,7 @@
                 let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.style.backgroundColor = '#0077FF'; toast.innerHTML = `📋 Чек заказа скопирован! Просто вставьте его в чат.`; document.body.appendChild(toast);
                 setTimeout(() => toast.classList.add('show'), 100); setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 4000);
             }).catch(err => { console.log('Ошибка: ', err); });
-            const telegramUrl = `https://t.me`; const vkUrl = `https://vk.com`;
+            const telegramUrl = `https://t.me/Kaneri_Mio`; const vkUrl = `https://vk.com/im/convo/582816715?tab=all`;
             document.getElementById('customAlertText').innerHTML = `<div style="font-size:14px; color:#2e7d32; font-weight:bold; margin-bottom:15px; background:#e8f5e9; padding:8px; border-radius:6px;">📋 Весь список товаров уже автоматически скопирован!</div>Выберите платформу, перейдите в чат и просто нажмите <b>Вставить (Ctrl + V)</b>:<br><br><a href="${telegramUrl}" target="_blank" class="social-connect-btn tg">✈️ Перейти в Telegram</a><a href="${vkUrl}" target="_blank" class="social-connect-btn vk">💬 Перейти ВКонтакте</a>`;
             document.getElementById('alertOverlay').style.display = 'block'; const alertBox = document.getElementById('customAlert'); alertBox.style.display = 'block'; setTimeout(() => alertBox.classList.add('show'), 10);
         }
