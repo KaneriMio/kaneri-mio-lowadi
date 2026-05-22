@@ -94,6 +94,21 @@
         /* Кнопка очистки корзины */
         .clear-cart-btn { width: 100%; background: none; border: 2px solid #c62828; color: #c62828; padding: 10px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; transition: all 0.2s; }
         .clear-cart-btn:hover { background: #ffebee; }
+        /* Кнопка "Приобрести" и обновленный блок итогов */
+        .cart-checkout-btn { display: block; width: 100%; background-color: #2e7d32; color: #fff; text-align: center; text-decoration: none; padding: 14px; border-radius: 8px; font-weight: bold; margin-top: 15px; font-size: 16px; cursor: pointer; border: none; box-shadow: 0 4px 12px rgba(46,125,50,0.2); }
+        .cart-checkout-btn:hover { background-color: #1b5e20; }
+        
+        /* Маленькая круглая кнопка очистки корзины */
+        .clear-cart-mini-btn { background: none; border: 1px solid #c62828; color: #c62828; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; padding: 0; }
+        .clear-cart-mini-btn:hover { background: #ffebee; }
+        .clear-cart-mini-btn svg { width: 16px; height: 16px; }
+
+        /* Кнопки соцсетей в центральном окне */
+        .social-connect-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 15px; text-decoration: none; color: white; margin-bottom: 10px; border: none; cursor: pointer; }
+        .social-connect-btn.tg { background-color: #24A1DE; }
+        .social-connect-btn.tg:hover { background-color: #1d83b5; }
+        .social-connect-btn.vk { background-color: #0077FF; }
+        .social-connect-btn.vk:hover { background-color: #0061d5; }
 
     </style>
 </head>
@@ -129,9 +144,11 @@
         <div style="flex-grow: 1; text-align: center; margin-left: 50px;">
             <h1>🐴 Lowadi | Kaneri Mio Company</h1>
         </div>
-        <button onclick="toggleCart()" style="background: #8b5a2b; border: 2px solid #d7ccc8; color: #fff; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 16px;">
-            🛒 Корзина <span id="cartCountBadge" style="background: #c62828; color: #fff; border-radius: 50%; padding: 2px 7px; font-size: 12px;">0</span>
-        </button>
+<button onclick="toggleCart()" style="background: #8b5a2b; border: 2px solid #d7ccc8; color: #fff; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 16px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+    Корзина <span id="cartCountBadge" style="background: #c62828; color: #fff; border-radius: 50%; padding: 2px 7px; font-size: 12px;">0</span>
+</button>
+
     </div>
 </div>
     <div class="container">
@@ -156,14 +173,21 @@
         </div>
 
         <!-- Итоговая сумма -->
-        <div class="sidebar-section" style="margin-bottom: 0;">
-            <div class="sidebar-section-title">Итого к оплате</div>
-        <!-- Кнопка очистки корзины -->
-        <button class="clear-cart-btn" onclick="clearCart()">🗑️ Очистить корзину</button>
-
+        <div class="sidebar-section" style="margin-bottom: 0;">        <!-- Блок итогов и управления -->
+        <div class="sidebar-section" style="margin-bottom: 0; margin-top: auto;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <div class="sidebar-section-title" style="margin-bottom: 0;">Итого к оплате</div>
+                <!-- Новая маленькая круглая кнопка с иконкой мусорки -->
+                <button class="clear-cart-mini-btn" onclick="clearCart()" title="Очистить корзину">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
+            </div>
             <div id="cartTotalPrice" class="sidebar-section-content" style="font-weight: bold; font-size: 20px; color: #2e7d32; background-color: #e8f5e9; border-left-color: #a5d6a7; text-align: center; padding: 15px;">0₽</div>
+            
+            <!-- Кнопка оформления заказа -->
+            <button class="cart-checkout-btn" onclick="checkoutOrder()">📦 Приобрести</button>
         </div>
-    </div>
+
     <script>
         const items = [
             { id: 1, name: "Рог Изобилия", category: "black-market", categoryName: "Черный рынок", description: "Открывает множество сокровищ: экю, пропуски, снаряжение и божественных лошадей.", image: "https://i.ibb.co/F4Sh8VMK/corne-abondance.png", count: "5 шт", price: "12₽", priceNum: 12, source: "Купить на Черном рынке за 100 пропусков, выиграть в акциях, получить за выполнение целей дня." },
@@ -409,12 +433,36 @@ localStorage.setItem('lowadi_cart', JSON.stringify(cart));
         // Функция полной очистки корзины
         function clearCart() {
             if (cart.length === 0) return;
-            if (confirm("Вы уверены, что хотите полностью очистить корзину? 🗑️")) {
+            
+            // Меняем заголовок и текст нашего центрального окна для подтверждения очистки
+            document.getElementById('customAlertText').innerText = "Вы уверены, что хотите полностью очистить корзину? 🗑️";
+            document.getElementById('alertOverlay').style.display = 'block';
+            
+            const alertBox = document.getElementById('customAlert');
+            // Переименуем заголовок окна на время удаления
+            alertBox.querySelector('.custom-alert-title').innerText = "🗑️ Очистка корзины";
+            alertBox.style.display = 'block';
+            setTimeout(() => alertBox.classList.add('show'), 10);
+            
+            // Навешиваем логику удаления на кнопку "В каталог" (переименовав её в "Очистить")
+            const okBtn = document.getElementById('customAlertOkBtn');
+            okBtn.innerText = "Очистить";
+            okBtn.style.backgroundColor = "#c62828";
+            
+            okBtn.onclick = function() {
                 cart = [];
                 saveCartData();
                 renderCart();
-            }
+                closeCustomAlert();
+                // Возвращаем исходный вид кнопке и заголовку для будущих предупреждений ЗЯ/ИЗЯ
+                setTimeout(() => {
+                    okBtn.innerText = "В каталог";
+                    okBtn.style.backgroundColor = "#8b5a2b";
+                    alertBox.querySelector('.custom-alert-title').innerText = "⚠️ Требуется окрас";
+                }, 300);
+            };
         }
+
 
         // Изменение количества (+ и -) внутри корзины
         function changeQuantity(id, delta) {
@@ -486,6 +534,81 @@ localStorage.setItem('lowadi_cart', JSON.stringify(cart));
 
         searchInput.addEventListener('input', filterData);
         displayItems(items);
+        // Функция формирования текста заказа и выбора связи
+        function checkoutOrder() {
+            if (cart.length === 0) return;
+
+            // 1. Формируем текст чека
+            let message = "Здравствуйте! Я хочу сделать заказ в Kaneri Mio Company:\n\n";
+            let totalSum = 0;
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                totalSum += itemTotal;
+                message += `${index + 1}. ${item.name}\n`;
+                if (item.isCoat) {
+                    message += `   • Окрас: ${item.coatName}\n   • Автор: ${item.coatAuthor}\n`;
+                }
+                message += `   • Количество: ${item.quantity} шт.\n   • Цена: ${itemTotal}₽\n\n`;
+            });
+
+            message += `Итоговая сумма заказа: ${totalSum}₽`;
+
+            // 2. АВТОМАТИЧЕСКОЕ КОПИРОВАНИЕ ТЕКСТА ЧЕКА В БУФЕР ОБМЕНА
+            navigator.clipboard.writeText(message).then(() => {
+                // Выводим красивую плашку уведомления о том, что всё скопировано
+                let toast = document.createElement('div');
+                toast.className = 'toast-notification';
+                toast.style.backgroundColor = '#0077FF'; // сделаем синей для отличия
+                toast.innerHTML = `📋 Чек заказа скопирован! Просто вставьте его в чат.`;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.classList.add('show'), 100);
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => toast.remove(), 400);
+                }, 4000);
+            }).catch(err => {
+                console.log('Ошибка копирования: ', err);
+            });
+
+            // 3. Прямые ссылки на ваши чаты без капризных текстов
+            const telegramUrl = `https://t.me/Kaneri_Mio`;
+            const vkUrl = `https://vk.com/im/convo/582816715?tab=all`;
+
+            // 4. Показываем красивое окно выбора соцсети
+            document.getElementById('customAlertText').innerHTML = `
+                <div style="font-size:14px; color:#2e7d32; font-weight:bold; margin-bottom:15px; background:#e8f5e9; padding:8px; border-radius:6px;">
+                    📋 Весь список товаров уже автоматически скопирован!
+                </div>
+                Выберите платформу, перейдите в чат и просто нажмите <b>Вставить (Ctrl + V)</b>:<br><br>
+                <a href="${telegramUrl}" target="_blank" class="social-connect-btn tg">✈️ Перейти в Telegram</a>
+                <a href="${vkUrl}" target="_blank" class="social-connect-btn vk">💬 Перейти ВКонтакте</a>
+            `;
+            
+            document.getElementById('alertOverlay').style.display = 'block';
+            const alertBox = document.getElementById('customAlert');
+            alertBox.querySelector('.custom-alert-title').innerText = "✉️ Отправка заказа";
+            
+            const okBtn = document.getElementById('customAlertOkBtn');
+            if(okBtn) okBtn.style.display = 'none';
+            
+            alertBox.style.display = 'block';
+            setTimeout(() => alertBox.classList.add('show'), 10);
+
+            const cancelBtn = alertBox.querySelector('.cancel');
+            const oldCancelClick = cancelBtn.onclick;
+            cancelBtn.onclick = function() {
+                closeCustomAlert();
+                setTimeout(() => {
+                    if(okBtn) okBtn.style.display = 'block';
+                    alertBox.querySelector('.custom-alert-title').innerText = "⚠️ Требуется окрас";
+                    cancelBtn.onclick = oldCancelClick;
+                }, 300);
+            };
+        }
+
+
+
     </script>
 </body>
 </html>
