@@ -49,6 +49,70 @@
         .overlay.open { display: block; }
         .toast-notification { position: fixed; top: 20px; right: -350px; background-color: #2e7d32; color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-weight: bold; z-index: 2000; transition: right 0.4s ease; }
         .toast-notification.show { right: 20px; }
+        /* --- НОВЫЕ СТИЛИ: ТЕГИ, ЗУМ И СОРТИРОВКА --- */
+        
+        /* Контейнер картинки: прячет лишнее при увеличении */
+        .coat-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Плавное увеличение самой картинки лошади */
+        .coat-img img {
+            transition: transform 0.4s ease;
+        }
+
+        /* Эффект зума при наведении мышки на карточку */
+        .coat-card:hover .coat-img img {
+            transform: scale(1.18);
+        }
+
+        /* Красивые плашки-теги поверх картинки */
+        .coat-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            color: #ffffff;
+            z-index: 2;
+            pointer-events: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .badge-new { background-color: #2ecc71; }       /* Зеленый цвет */
+        .badge-limited { background-color: #e74c3c; }   /* Красный цвет */
+
+        /* Стили для блока кнопок быстрой фильтрации/тегам */
+        .tag-chips-container {
+            display: flex;
+            gap: 8px;
+            grid-column: 1 / -1;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .tag-chip {
+            background: #efebe9;
+            border: 1px solid #d7ccc8;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            cursor: pointer;
+            color: #4a3728;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .tag-chip:hover, .tag-chip.active {
+            background: #8b5a2b;
+            color: #fff;
+            border-color: #5d4037;
+        }
     </style>
 </head>
 <body>
@@ -94,82 +158,177 @@
             <div class="filter-group"><label>Название масти</label><input type="text" id="searchTitle" class="filter-control" placeholder="Название..."></div>
             <div class="filter-group"><label>Автор</label><input type="text" id="searchAuthor" class="filter-control" placeholder="Никнейм..."></div>
             <div class="filter-group"><label>Вид лошади</label><select id="filterType" class="filter-control"><option value="all">Все виды</option><option value="верховая">Верховая лошадь</option><option value="пегас">Пегас</option><option value="единорог">Единорог</option><option value="пони">Пони</option><option value="осел">Осел</option></select></div>
+            
+            <!-- Добавили сортировку (без копий) -->
+            <div class="filter-group">
+                <label>Сортировка</label>
+                <select id="sortControl" class="filter-control">
+                    <option value="default">По умолчанию</option>
+                    <option value="new">Сначала Новинки</option>
+                    <option value="hot">Горячее (Популярные)</option>
+                    <option value="rare">Редкие (Мало в наличии)</option>
+                </select>
+            </div>
+
+            <!-- Добавили быстрый кликабельный поиск по ключевым словам -->
+            <div class="tag-chips-container">
+                <span class="tag-chip active" onclick="selectTag('all', this)">Все темы</span>
+                <span class="tag-chip" onclick="selectTag('готика', this)">#готика</span>
+                <span class="tag-chip" onclick="selectTag('милый', this)">#милый</span>
+                <span class="tag-chip" onclick="selectTag('животные', this)">#животные</span>
+            </div>
         </div>
+
         <div class="grid" id="coatsContainer"></div>
     </div>
     <script>
+        // 1. БАЗА ДАННЫХ ЗОЛОТОГО ЯБЛОКА (ЗЯ)
         const coats = [
-            { name: "Огненный Элементаль", author: "MioCreator", type: "единорог", price: "15₽", count: "2 шт", image: "https://ibb.co" },
-            { name: "Небесный Альбатрос", author: "Kaneri", type: "пегас", price: "15₽", count: "1 шт", image: "https://ibb.co" }
+            { 
+                id: "zy_001",
+                name: "Огненный Элементаль", 
+                author: "MioCreator", 
+                type: "единорог", 
+                price: "15₽", 
+                count: "2 шт", 
+                image: "https://i.ibb.co/yFF0Sgzp/100105561-normal.png",
+                status: "new", 
+                tags: ["милый", "животные"],
+                views: 28 // Число просмотров для фильтра "Горячее"
+            },
+            { 
+                id: "zy_002",
+                name: "Небесный Альбатрос", 
+                author: "Kaneri", 
+                type: "пегас", 
+                price: "15₽", 
+                count: "1 шт", 
+                image: "https://ibb.co", 
+                status: "limited", 
+                tags: ["готика", "животные"],
+                views: 54
+            }
         ];
+
         let cart = [];
+        let selectedTag = 'all'; // Текущий выбранный хэштег
+
+        // 2. ОТРИСОВКА КАРТОЧЕК В КОНТЕЙНЕР
         function displayCoats(filteredCoats) {
-            const container = document.getElementById('coatsContainer'); container.innerHTML = '';
-            if(filteredCoats.length === 0) { container.innerHTML = '<div class="no-results">Масти не найдены 🐴</div>'; return; }
-            filteredCoats.forEach((coat, index) => {
-                container.innerHTML += `<div class="coat-card"><div class="coat-img"><img src="${coat.image}"></div><div class="coat-info"><div class="coat-title">${coat.name}</div><div class="coat-detail">Автор: <strong>${coat.author}</strong></div><div class="coat-detail">Вид: <strong>${coat.type}</strong></div><div class="coat-detail">В наличии: <strong>${coat.count}</strong></div><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;"><div class="coat-price">Цена: ${coat.price}</div><button onclick="addCoatToCart(${index}, 'ЗЯ', 'https://ibb.co')" style="background: #2e7d32; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 42px; height: 34px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></button></div></div></div>`;
+            const container = document.getElementById('coatsContainer'); 
+            container.innerHTML = '';
+            
+            if(filteredCoats.length === 0) { 
+                container.innerHTML = '<div class="no-results">Масти не найдены 🐴</div>'; 
+                return; 
+            }
+            
+            filteredCoats.forEach((coat) => {
+                // Логика отображения тегов (New / Limited)
+                let badgeHTML = '';
+                if (coat.status === 'new') {
+                    badgeHTML = '<span class="coat-badge badge-new">New</span>';
+                } else if (coat.status === 'limited') {
+                    badgeHTML = '<span class="coat-badge badge-limited">Limited</span>';
+                }
+
+                const originalIndex = coats.findIndex(c => c.name === coat.name && c.author === coat.author);
+
+                // Строим карточку БЕЗ строки с копиями, так как в ЗЯ их нет
+                container.innerHTML += `
+                    <div class="coat-card">
+                        <div class="coat-img">
+                            ${badgeHTML}
+                            <img src="${coat.image}">
+                        </div>
+                        <div class="coat-info">
+                            <div class="coat-title">${coat.name}</div>
+                            <div class="coat-detail">Автор: <strong>${coat.author}</strong></div>
+                            <div class="coat-detail">Вид: <strong>${coat.type}</strong></div>
+                            <div class="coat-detail">В наличии: <strong>${coat.count}</strong></div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                <div class="coat-price">Цена: ${coat.price}</div>
+                                <button onclick="addCoatToCart(${originalIndex}, 'ЗЯ', '${coat.image}')" style="background: #2e7d32; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 42px; height: 34px;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
             });
         }
+        // 3. УМНЫЙ ФИЛЬТР + СОРТИРОВКА + ПОИСК ПО ТЕГАМ (БЕЗ КОПИЙ)
         function filterCoats() {
             const fTitle = document.getElementById('searchTitle').value.toLowerCase();
             const fAuthor = document.getElementById('searchAuthor').value.toLowerCase();
             const fType = document.getElementById('filterType').value;
-            const res = coats.filter(c => c.name.toLowerCase().includes(fTitle) && c.author.toLowerCase().includes(fAuthor) && (fType === 'all' || c.type === fType));
+            const sortBy = document.getElementById('sortControl').value;
+
+            // Фильтруем список по названию, автору, виду лошади и хэштегу
+            let res = coats.filter(c => {
+                const matchesTitle = c.name.toLowerCase().includes(fTitle);
+                const matchesAuthor = c.author.toLowerCase().includes(fAuthor);
+                const matchesType = (fType === 'all' || c.type === fType);
+                const matchesTag = (selectedTag === 'all' || (c.tags && c.tags.includes(selectedTag)));
+
+                return matchesTitle && matchesAuthor && matchesType && matchesTag;
+            });
+
+            // Применяем выбранный режим сортировки
+            if (sortBy === 'new') {
+                // Новинки (status: "new") поднимаем на самый верх каталога
+                res.sort((a, b) => (b.status === 'new') - (a.status === 'new'));
+            } else if (sortBy === 'hot') {
+                // Горячее: сортируем по количеству просмотров (views) сверху вниз
+                res.sort((a, b) => b.views - a.views);
+            } else if (sortBy === 'rare') {
+                // Редкие: сортируем по количеству в наличии, где меньше штук — те первее
+                res.sort((a, b) => parseInt(a.count) - parseInt(b.count));
+            }
+
             displayCoats(res);
         }
+
+        // Функция переключения активного хэштега при клике
+        function selectTag(tag, element) {
+            selectedTag = tag;
+            document.querySelectorAll('.tag-chip').forEach(chip => chip.classList.remove('active'));
+            element.classList.add('active');
+            filterCoats();
+        }
+        // 4. СТАНДАРТНАЯ ЛОГИКА КОРЗИНЫ
         function toggleCart() {
             const sidebar = document.getElementById('cartSidebar'); const overlay = document.getElementById('cartOverlay');
             if (sidebar.classList.contains('open')) { sidebar.classList.remove('open'); overlay.classList.remove('open'); } 
             else { sidebar.classList.add('open'); overlay.classList.add('open'); renderCart(); }
         }
+
         function addCoatToCart(index, parentName, parentImg) {
             const coat = coats[index]; cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
             const existItem = cart.find(i => i.isCoat && i.coatName === coat.name && i.coatAuthor === coat.author);
             if (existItem) { existItem.quantity += 1; } 
-            else { cart.push({ id: 'zy-' + index + '-' + Date.now(), name: parentName, coatName: coat.name, coatAuthor: coat.author, price: parseInt(coat.price) || 0, image: parentImg, quantity: 1, isCoat: true }); }
+            else { cart.push({ id: 'zy-' + index + '-' + Date.now(), name: parentName, coatName: coat.name, coatAuthor: coat.author, price: parseInt(coat.price) || 0, image: coat.image, quantity: 1, isCoat: true }); }
             localStorage.setItem('lowadi_cart', JSON.stringify(cart)); updateCartBadge();
             let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.innerHTML = `🛒 Окрас "${coat.name}" добавлен к заказу ${parentName}!`; document.body.appendChild(toast);
             setTimeout(() => toast.classList.add('show'), 100); setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 3000);
         }
+
         function changeQuantity(id, delta) {
             cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; const cartItem = cart.find(i => i.id == id); if (!cartItem) return;
             cartItem.quantity += delta; if (cartItem.quantity <= 0) { cart = cart.filter(i => i.id != id); }
             localStorage.setItem('lowadi_cart', JSON.stringify(cart)); updateCartBadge(); renderCart();
         }
+
         function updateCartBadge() { const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0); document.getElementById('cartCountBadge').innerText = totalCount; }
+        
         function clearCart() {
             if (cart.length === 0) return;
-            document.getElementById('alertOverlay').style.display = 'block';
-            const alertBox = document.getElementById('clearCartAlert');
-            alertBox.style.display = 'block';
-            setTimeout(() => alertBox.classList.add('show'), 10);
+            document.getElementById('customAlertText').innerHTML = `Вы уверены, что хотите полностью очистить корзину? 🗑️<br><br><div style="display:flex; gap:10px;"><button class="custom-alert-btn cancel" onclick="closeClearCartAlert()" style="flex:1;">Отмена</button><button class="custom-alert-btn" onclick="confirmClearCart()" style="flex:1; background-color:#c62828; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">Очистить</button></div>`;
+            document.getElementById('alertOverlay').style.display = 'block'; const alertBox = document.getElementById('clearCartAlert'); alertBox.style.display = 'block'; setTimeout(() => alertBox.classList.add('show'), 10);
         }
 
-        function closeClearCartAlert() {
-            const alertBox = document.getElementById('clearCartAlert');
-            alertBox.classList.remove('show');
-            setTimeout(() => {
-                alertBox.style.display = 'none';
-                document.getElementById('alertOverlay').style.display = 'none';
-            }, 300);
-        }
-
-        function confirmClearCart() { 
-            cart = []; 
-            localStorage.setItem('lowadi_cart', JSON.stringify(cart)); 
-            updateCartBadge(); 
-            renderCart(); 
-            closeClearCartAlert(); 
-        }
-
-        function closeCustomAlert() { 
-            const alertBox = document.getElementById('customAlert'); 
-            alertBox.classList.remove('show'); 
-            setTimeout(() => {
-                alertBox.style.display = 'none';
-                document.getElementById('alertOverlay').style.display = 'none';
-            }, 300); 
-        }
+        function closeClearCartAlert() { const alertBox = document.getElementById('clearCartAlert'); alertBox.classList.remove('show'); setTimeout(() => { alertBox.style.display = 'none'; document.getElementById('alertOverlay').style.display = 'none'; }, 300); }
+        function confirmClearCart() { cart = []; localStorage.setItem('lowadi_cart', JSON.stringify(cart)); updateCartBadge(); renderCart(); closeClearCartAlert(); }
+        function closeCustomAlert() { const alertBox = document.getElementById('customAlert'); alertBox.classList.remove('show'); setTimeout(() => { alertBox.style.display = 'none'; document.getElementById('alertOverlay').style.display = 'none'; }, 300); }
 
         function checkoutOrder() {
             if (cart.length === 0) return;
@@ -179,15 +338,16 @@
                 if (item.isCoat) { message += `   • Окрас: ${item.coatName}\n   • Автор: ${item.coatAuthor}\n`; }
                 message += `   • Количество: ${item.quantity} шт.\n   • Цена: ${itemTotal}₽\n\n`;
             });
-            message += `Итоговая сумма заказа: ${totalSum}₽`; const encodedText = encodeURIComponent(message);
+            message += `Итоговая сумма заказа: ${totalSum}₽`;
             navigator.clipboard.writeText(message).then(() => {
                 let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.style.backgroundColor = '#0077FF'; toast.innerHTML = `📋 Чек заказа скопирован! Просто вставьте его в чат.`; document.body.appendChild(toast);
                 setTimeout(() => toast.classList.add('show'), 100); setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 4000);
             }).catch(err => { console.log('Ошибка: ', err); });
-            const telegramUrl = `https://t.me/Kaneri_Mio`; const vkUrl = `https://vk.com/im/convo/582816715?tab=all`;
+            const telegramUrl = `https://t.me`; const vkUrl = `https://vk.com`;
             document.getElementById('customAlertText').innerHTML = `<div style="font-size:14px; color:#2e7d32; font-weight:bold; margin-bottom:15px; background:#e8f5e9; padding:8px; border-radius:6px;">📋 Весь список товаров уже автоматически скопирован!</div>Выберите платформу, перейдите в чат и просто нажмите <b>Вставить (Ctrl + V)</b>:<br><br><a href="${telegramUrl}" target="_blank" class="social-connect-btn tg">✈️ Перейти в Telegram</a><a href="${vkUrl}" target="_blank" class="social-connect-btn vk">💬 Перейти ВКонтакте</a>`;
-            document.getElementById('alertOverlay').style.display = 'block'; const alertBox = document.getElementById('customAlert'); alertBox.querySelector('.custom-alert-title').innerText = "✉️ Отправка заказа"; alertBox.style.display = 'block'; setTimeout(() => alertBox.classList.add('show'), 10);
+            document.getElementById('alertOverlay').style.display = 'block'; const alertBox = document.getElementById('customAlert'); alertBox.style.display = 'block'; setTimeout(() => alertBox.classList.add('show'), 10);
         }
+
         function renderCart() {
             const listContainer = document.getElementById('cartItemsList'); listContainer.innerHTML = ''; let totalSum = 0; cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
             if (cart.length === 0) { listContainer.innerHTML = '<div style="text-align:center; color:#757575; margin-top:40px;">Корзина пока пуста 🐴</div>'; document.getElementById('cartTotalPrice').innerText = '0₽'; return; }
@@ -197,10 +357,14 @@
             });
             document.getElementById('cartTotalPrice').innerText = totalSum + '₽';
         }
+
+        // 5. НАВЕШИВАНИЕ СЛУШАТЕЛЕЙ ДЛЯ СТРАНИЦЫ ЗЯ
         window.addEventListener('load', () => { cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; updateCartBadge(); });
         document.getElementById('searchTitle').addEventListener('input', filterCoats);
         document.getElementById('searchAuthor').addEventListener('input', filterCoats);
         document.getElementById('filterType').addEventListener('change', filterCoats);
+        document.getElementById('sortControl').addEventListener('change', filterCoats); // Слушатель сортировки
+        
         displayCoats(coats);
     </script>
 </body>

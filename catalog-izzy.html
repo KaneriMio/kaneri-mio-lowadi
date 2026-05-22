@@ -49,6 +49,110 @@
         .overlay.open { display: block; }
         .toast-notification { position: fixed; top: 20px; right: -350px; background-color: #2e7d32; color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-weight: bold; z-index: 2000; transition: right 0.4s ease; }
         .toast-notification.show { right: 20px; }
+        /* --- НОВЫЕ СТИЛИ: ТЕГИ, ЗУМ И СОРТИРОВКА --- */
+        
+        /* Контейнер картинки: прячет лишнее при увеличении */
+        .coat-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Плавное увеличение самой картинки лошади */
+        .coat-img img {
+            transition: transform 0.4s ease;
+        }
+
+        /* Эффект зума при наведении мышки на карточку */
+        .coat-card:hover .coat-img img {
+            transform: scale(1.18);
+        }
+
+        /* Красивые плашки-теги поверх картинки */
+        .coat-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            color: #ffffff;
+            z-index: 2;
+            pointer-events: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .badge-new { background-color: #2ecc71; }       /* Зеленый цвет */
+        .badge-limited { background-color: #e74c3c; }   /* Красный цвет */
+
+        /* Стили для блока кнопок быстрой фильтрации/тегам (поиск по словам) */
+        .tag-chips-container {
+            display: flex;
+            gap: 8px;
+            grid-column: 1 / -1;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .tag-chip {
+            background: #efebe9;
+            border: 1px solid #d7ccc8;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            cursor: pointer;
+            color: #4a3728;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .tag-chip:hover, .tag-chip.active {
+            background: #8b5a2b;
+            color: #fff;
+            border-color: #5d4037;
+        }
+        /* --- СТИЛИ ДЛЯ КНОПКИ ИЗБРАННОГО (СЕРДЕЧКО) --- */
+        .btn-favorite {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            padding: 0;
+        }
+
+        .btn-favorite:hover {
+            transform: scale(1.1);
+            background-color: #ffffff;
+        }
+
+        .btn-favorite svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: #b2bec3; /* Серое сердечко по умолчанию */
+            stroke-width: 2.5;
+            transition: all 0.2s ease;
+        }
+
+        /* Когда товар добавлен в избранное — красим в красный цвет */
+        .btn-favorite.active svg {
+            fill: #e74c3c;
+            stroke: #e74c3c;
+        }
+
     </style>
 </head>
 <body>
@@ -90,59 +194,232 @@
             <div class="filter-group"><label>Автор</label><input type="text" id="searchAuthor" class="filter-control" placeholder="Никнейм..."></div>
             <div class="filter-group"><label>Вид лошади</label><select id="filterType" class="filter-control"><option value="all">Все виды</option><option value="верховая">Верховая лошадь</option><option value="пегас">Пегас</option><option value="единорог">Единорог</option><option value="пони">Пони</option><option value="осел">Осел</option></select></div>
             <div class="filter-group"><label>Копии</label><select id="filterCopies" class="filter-control"><option value="all">Любое число</option><option value="100">100 копий</option><option value="200">200 копий</option><option value="unlimited">Безлимитные</option></select></div>
+            
+            <!-- Добавили сортировку -->
+            <div class="filter-group">
+                <label>Сортировка</label>
+                <select id="sortControl" class="filter-control">
+                    <option value="default">По умолчанию</option>
+                    <option value="new">Сначала Новинки</option>
+                    <option value="hot">Горячее (Популярные)</option>
+                    <option value="rare">Редкие (Мало в наличии)</option>
+                </select>
+            </div>
+
+            <!-- Добавили быстрый кликабельный поиск по ключевым словам -->
+            <div class="tag-chips-container">
+                <span class="tag-chip active" onclick="selectTag('all', this)">Все темы</span>
+                <span class="tag-chip" onclick="selectTag('готика', this)">#готика</span>
+                <span class="tag-chip" onclick="selectTag('милый', this)">#милый</span>
+                <span class="tag-chip" onclick="selectTag('животные', this)">#животные</span>
+<span class="tag-chip" onclick="selectTag('favorites', this)" style="border-color: #e74c3c; color: #c62828;">❤️ Моё избранное</span>
+
+            </div>
         </div>
+
         <div class="grid" id="coatsContainer"></div>
     </div>
     <script>
+        // 1. БАЗА ДАННЫХ ИЗЯ (У всех товаров есть уникальный id, tags и views)
         const coats = [
-            { name: "Винтажный Мустанг", author: "OldPlayer", type: "верховая", copies: "100", price: "25₽", count: "50 шт", image: "https://ibb.co" },
-            { name: "Древний Ослик", author: "RetroLover", type: "осел", copies: "100", price: "40₽", count: "2 шт", image: "https://ibb.co" }
+            { 
+                id: "izzy_001",
+                name: "Винтажный Мустанг", 
+                author: "OldPlayer", 
+                type: "верховая", 
+                copies: "270", 
+                price: "25₽", 
+                count: "50 шт", 
+                image: "https://i.ibb.co/Cf4D7HS/100427583-normal.png", 
+                status: "new",       
+                tags: ["милый"],     
+                views: 15            
+            },
+            { 
+                id: "izzy_002",
+                name: "Древний Ослик", 
+                author: "RetroLover", 
+                type: "осел", 
+                copies: "100", 
+                price: "40₽", 
+                count: "2 шт", 
+                image: "https://ibb.co", 
+                status: "limited",   
+                tags: ["готика", "животные"], 
+                views: 42 
+            }
         ];
+
         let cart = [];
+        let selectedTag = 'all'; 
+
+        // 2. ФУНКЦИЯ ОТРИСОВКИ КАРТОЧЕК С УЧЁТОМ ИЗБРАННОГО
         function displayCoats(filteredCoats) {
-            const container = document.getElementById('coatsContainer'); container.innerHTML = '';
-            if(filteredCoats.length === 0) { container.innerHTML = '<div class="no-results">Масти не найдены 🐴</div>'; return; }
-            filteredCoats.forEach((coat, index) => {
+            const container = document.getElementById('coatsContainer'); 
+            container.innerHTML = '';
+            
+            if(filteredCoats.length === 0) { 
+                container.innerHTML = '<div class="no-results">Масти не найдены 🐴</div>'; 
+                return; 
+            }
+
+            const favorites = JSON.parse(localStorage.getItem('lowadi_favorites')) || [];
+            
+            filteredCoats.forEach((coat) => {
                 const copiesText = coat.copies === 'unlimited' ? 'Безлимитные' : coat.copies + ' шт.';
-                container.innerHTML += `<div class="coat-card"><div class="coat-img"><img src="${coat.image}"></div><div class="coat-info"><div class="coat-title">${coat.name}</div><div class="coat-detail">Автор: <strong>${coat.author}</strong></div><div class="coat-detail">Вид: <strong>${coat.type}</strong></div><div class="coat-detail">Копии: <strong>${copiesText}</strong></div><div class="coat-detail">В наличии: <strong>${coat.count}</strong></div><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;"><div class="coat-price">Цена: ${coat.price}</div><button onclick="addCoatToCart(${index}, 'ИЗЯ', 'https://ibb.co')" style="background: #2e7d32; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 42px; height: 34px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></button></div></div></div>`;
+                
+                let badgeHTML = '';
+                if (coat.status === 'new') {
+                    badgeHTML = '<span class="coat-badge badge-new">New</span>';
+                } else if (coat.status === 'limited') {
+                    badgeHTML = '<span class="coat-badge badge-limited">Limited</span>';
+                }
+
+                const isFav = favorites.includes(coat.id);
+                const favClass = isFav ? 'active' : '';
+                const originalIndex = coats.findIndex(c => c.name === coat.name && c.author === coat.author);
+
+                container.innerHTML += `
+                    <div class="coat-card">
+                        <div class="coat-img">
+                            ${badgeHTML}
+                            <button class="btn-favorite ${favClass}" onclick="toggleFavorite('${coat.id}', this)" title="В избранное">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                            <img src="${coat.image}">
+                        </div>
+                        <div class="coat-info">
+                            <div class="coat-title">${coat.name}</div>
+                            <div class="coat-detail">Автор: <strong>${coat.author}</strong></div>
+                            <div class="coat-detail">Вид: <strong>${coat.type}</strong></div>
+                            <div class="coat-detail">Копии: <strong>${copiesText}</strong></div>
+                            <div class="coat-detail">В наличии: <strong>${coat.count}</strong></div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                <div class="coat-price">Цена: ${coat.price}</div>
+                                <button onclick="addCoatToCart(${originalIndex}, 'ИЗЯ', '${coat.image}')" style="background: #2e7d32; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 42px; height: 34px;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
             });
         }
+        // 3. УМНЫЙ ФИЛЬТР + СОРТИРОВКА + ХЭШТЕГИ И ИЗБРАННОЕ
         function filterCoats() {
             const fTitle = document.getElementById('searchTitle').value.toLowerCase();
             const fAuthor = document.getElementById('searchAuthor').value.toLowerCase();
             const fType = document.getElementById('filterType').value;
             const fCopies = document.getElementById('filterCopies').value;
-            const res = coats.filter(c => c.name.toLowerCase().includes(fTitle) && c.author.toLowerCase().includes(fAuthor) && (fType === 'all' || c.type === fType) && (fCopies === 'all' || c.copies === fCopies));
+            const sortBy = document.getElementById('sortControl').value;
+            
+            const favorites = JSON.parse(localStorage.getItem('lowadi_favorites')) || [];
+
+            let res = coats.filter(c => {
+                const matchesTitle = c.name.toLowerCase().includes(fTitle);
+                const matchesAuthor = c.author.toLowerCase().includes(fAuthor);
+                const matchesType = (fType === 'all' || c.type === fType);
+                const matchesCopies = (fCopies === 'all' || c.copies === fCopies);
+                
+                let matchesTag = false;
+                if (selectedTag === 'all') {
+                    matchesTag = true;
+                } else if (selectedTag === 'favorites') {
+                    matchesTag = favorites.includes(c.id);
+                } else {
+                    matchesTag = (c.tags && c.tags.includes(selectedTag));
+                }
+
+                return matchesTitle && matchesAuthor && matchesType && matchesCopies && matchesTag;
+            });
+
+            if (sortBy === 'new') {
+                res.sort((a, b) => (b.status === 'new') - (a.status === 'new'));
+            } else if (sortBy === 'hot') {
+                res.sort((a, b) => b.views - a.views);
+            } else if (sortBy === 'rare') {
+                res.sort((a, b) => parseInt(a.count) - parseInt(b.count));
+            }
+
             displayCoats(res);
         }
+
+        function selectTag(tag, element) {
+            selectedTag = tag;
+            document.querySelectorAll('.tag-chip').forEach(chip => chip.classList.remove('active'));
+            element.classList.add('active');
+            filterCoats();
+        }
+
+        // 4. ДОБАВЛЕНИЕ/УДАЛЕНИЕ ИЗ ИЗБРАННОГО
+        function toggleFavorite(coatId, buttonElement) {
+            let favorites = JSON.parse(localStorage.getItem('lowadi_favorites')) || [];
+            
+            if (favorites.includes(coatId)) {
+                favorites = favorites.filter(id => id !== coatId);
+                buttonElement.classList.remove('active');
+                showToast(`💔 Удалено из избранного`);
+            } else {
+                favorites.push(coatId);
+                buttonElement.classList.add('active');
+                showToast(`❤️ Добавлено в избранное!`);
+            }
+            
+            localStorage.setItem('lowadi_favorites', JSON.stringify(favorites));
+            
+            if (selectedTag === 'favorites') {
+                filterCoats();
+            }
+        }
+
+        function showToast(text) {
+            let toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.style.backgroundColor = '#e74c3c'; 
+            toast.innerHTML = text;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 2500);
+        }
+        // 5. РАБОТА КОРЗИНЫ И ОФОРМЛЕНИЯ ЗАКАЗА
         function toggleCart() {
             const sidebar = document.getElementById('cartSidebar'); const overlay = document.getElementById('cartOverlay');
             if (sidebar.classList.contains('open')) { sidebar.classList.remove('open'); overlay.classList.remove('open'); } 
             else { sidebar.classList.add('open'); overlay.classList.add('open'); renderCart(); }
         }
+
         function addCoatToCart(index, parentName, parentImg) {
             const coat = coats[index]; cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
             const existItem = cart.find(i => i.isCoat && i.coatName === coat.name && i.coatAuthor === coat.author);
             if (existItem) { existItem.quantity += 1; } 
-            else { cart.push({ id: 'izzy-' + index + '-' + Date.now(), name: parentName, coatName: coat.name, coatAuthor: coat.author, price: parseInt(coat.price) || 0, image: parentImg, quantity: 1, isCoat: true }); }
+            else { cart.push({ id: 'izzy-' + index + '-' + Date.now(), name: parentName, coatName: coat.name, coatAuthor: coat.author, price: parseInt(coat.price) || 0, image: coat.image, quantity: 1, isCoat: true }); }
             localStorage.setItem('lowadi_cart', JSON.stringify(cart)); updateCartBadge();
             let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.innerHTML = `🛒 Окрас "${coat.name}" добавлен к заказу ${parentName}!`; document.body.appendChild(toast);
             setTimeout(() => toast.classList.add('show'), 100); setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 3000);
         }
+
         function changeQuantity(id, delta) {
             cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; const cartItem = cart.find(i => i.id == id); if (!cartItem) return;
             cartItem.quantity += delta; if (cartItem.quantity <= 0) { cart = cart.filter(i => i.id != id); }
             localStorage.setItem('lowadi_cart', JSON.stringify(cart)); updateCartBadge(); renderCart();
         }
+
         function updateCartBadge() { const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0); document.getElementById('cartCountBadge').innerText = totalCount; }
+        
         function clearCart() {
             if (cart.length === 0) return;
-            document.getElementById('customAlertText').innerHTML = `Вы уверены, что хотите полностью очистить корзину? 🗑️<br><br><div style="display:flex; gap:10px;"><button class="custom-alert-btn cancel" onclick="closeClearCartAlert()" style="flex:1;">Отмена</button><button class="custom-alert-btn" onclick="confirmClearCart()" style="flex:1; background-color:#c62828; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer; flex:1;">Очистить</button></div>`;
+            document.getElementById('customAlertText').innerHTML = `Вы уверены, что хотите полностью очистить корзину? 🗑️<br><br><div style="display:flex; gap:10px;"><button class="custom-alert-btn cancel" onclick="closeClearCartAlert()" style="flex:1;">Отмена</button><button class="custom-alert-btn" onclick="confirmClearCart()" style="flex:1; background-color:#c62828; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">Очистить</button></div>`;
             document.getElementById('alertOverlay').style.display = 'block'; const alertBox = document.getElementById('clearCartAlert'); alertBox.style.display = 'block'; setTimeout(() => alertBox.classList.add('show'), 10);
         }
-        function closeClearCartAlert() { const alertBox = document.getElementById('clearCartAlert'); alertBox.classList.remove('show'); setTimeout(() => { alertBox.style.display = 'none'; document.getElementById('alertOverlay').style.display = 'none'; }, 300); }
+
+        function closeClearCartAlert() { const alertBox = document.getElementById('clearCartAlert'); alertBox.classList.remove('show'); setTimeout(() => { alertBox.style.display = 'none'; document.getElementById('alertOverlay').style.none; }, 300); }
         function confirmClearCart() { cart = []; localStorage.setItem('lowadi_cart', JSON.stringify(cart)); updateCartBadge(); renderCart(); closeClearCartAlert(); }
         function closeCustomAlert() { const alertBox = document.getElementById('customAlert'); alertBox.classList.remove('show'); setTimeout(() => { alertBox.style.display = 'none'; document.getElementById('alertOverlay').style.display = 'none'; }, 300); }
+
         function checkoutOrder() {
             if (cart.length === 0) return;
             let message = "Здравствуйте! Я хочу сделать заказ в Kaneri Mio Company:\n\n"; let totalSum = 0;
@@ -151,15 +428,16 @@
                 if (item.isCoat) { message += `   • Окрас: ${item.coatName}\n   • Автор: ${item.coatAuthor}\n`; }
                 message += `   • Количество: ${item.quantity} шт.\n   • Цена: ${itemTotal}₽\n\n`;
             });
-            message += `Итоговая сумма заказа: ${totalSum}₽`; const encodedText = encodeURIComponent(message);
+            message += `Итоговая сумма заказа: ${totalSum}₽`;
             navigator.clipboard.writeText(message).then(() => {
                 let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.style.backgroundColor = '#0077FF'; toast.innerHTML = `📋 Чек заказа скопирован! Просто вставьте его в чат.`; document.body.appendChild(toast);
                 setTimeout(() => toast.classList.add('show'), 100); setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 4000);
             }).catch(err => { console.log('Ошибка: ', err); });
-            const telegramUrl = `https://t.me/Kaneri_Mio`; const vkUrl = `https://vk.com/im/convo/582816715?tab=all`;
+            const telegramUrl = `https://t.me`; const vkUrl = `https://vk.com`;
             document.getElementById('customAlertText').innerHTML = `<div style="font-size:14px; color:#2e7d32; font-weight:bold; margin-bottom:15px; background:#e8f5e9; padding:8px; border-radius:6px;">📋 Весь список товаров уже автоматически скопирован!</div>Выберите платформу, перейдите в чат и просто нажмите <b>Вставить (Ctrl + V)</b>:<br><br><a href="${telegramUrl}" target="_blank" class="social-connect-btn tg">✈️ Перейти в Telegram</a><a href="${vkUrl}" target="_blank" class="social-connect-btn vk">💬 Перейти ВКонтакте</a>`;
             document.getElementById('alertOverlay').style.display = 'block'; const alertBox = document.getElementById('customAlert'); alertBox.style.display = 'block'; setTimeout(() => alertBox.classList.add('show'), 10);
         }
+
         function renderCart() {
             const listContainer = document.getElementById('cartItemsList'); listContainer.innerHTML = ''; let totalSum = 0; cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
             if (cart.length === 0) { listContainer.innerHTML = '<div style="text-align:center; color:#757575; margin-top:40px;">Корзина пока пуста 🐴</div>'; document.getElementById('cartTotalPrice').innerText = '0₽'; return; }
@@ -169,12 +447,21 @@
             });
             document.getElementById('cartTotalPrice').innerText = totalSum + '₽';
         }
-        window.addEventListener('load', () => { cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; updateCartBadge(); });
-        document.getElementById('searchTitle').addEventListener('input', filterCoats);
-        document.getElementById('searchAuthor').addEventListener('input', filterCoats);
-        document.getElementById('filterType').addEventListener('change', filterCoats);
-        document.getElementById('filterCopies').addEventListener('change', filterCoats);
-        displayCoats(coats);
+
+        // 6. НАВЕШИВАНИЕ СЛУШАТЕЛЕЙ СТРАНИЦЫ И СТАРТ
+        window.addEventListener('load', () => { 
+            cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; 
+            updateCartBadge(); 
+        });
+
+        if(document.getElementById('searchTitle')) document.getElementById('searchTitle').addEventListener('input', filterCoats);
+        if(document.getElementById('searchAuthor')) document.getElementById('searchAuthor').addEventListener('input', filterCoats);
+        if(document.getElementById('filterType')) document.getElementById('filterType').addEventListener('change', filterCoats);
+        if(document.getElementById('filterCopies')) document.getElementById('filterCopies').addEventListener('change', filterCoats);
+        if(document.getElementById('sortControl')) document.getElementById('sortControl').addEventListener('change', filterCoats);
+        
+        filterCoats();
+
     </script>
 </body>
 </html>
