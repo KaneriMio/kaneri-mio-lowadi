@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог мастей Исчезнувшего Золотого Яблока</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f5efe6; color: #333; padding-bottom: 50px; }
+        .header { background-color: #4a3728; color: #fff; padding: 20px; text-align: center; margin-bottom: 25px; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .back-btn { position: absolute; left: 20px; top: 22px; color: #fff; text-decoration: none; font-weight: bold; background: #8b5a2b; padding: 6px 16px; border-radius: 8px; font-size: 14px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .filter-panel { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; border: 1px solid #efebe9; }
+        .filter-group { display: flex; flex-direction: column; gap: 5px; }
+        .filter-group label { font-size: 13px; font-weight: bold; color: #8d6e63; text-transform: uppercase; }
+        .filter-control { padding: 10px; border: 2px solid #d7ccc8; border-radius: 6px; font-size: 15px; outline: none; background: #fff; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 25px; }
+        .coat-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column; border: 1px solid #efebe9; }
+        .coat-img { height: 160px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 15px; border-bottom: 1px solid #f5f0eb; }
+        .coat-img img { max-height: 100%; max-width: 100%; object-fit: contain; }
+        .coat-info { padding: 20px; flex-grow: 1; }
+        .coat-title { font-size: 18px; font-weight: bold; color: #3e2723; margin-bottom: 8px; }
+        .coat-detail { font-size: 14px; color: #5d4037; margin-bottom: 4px; }
+        .coat-detail strong { color: #8b5a2b; }
+        .coat-price { font-size: 16px; font-weight: bold; color: #2e7d32; margin-top: 10px; }
+        .no-results { text-align: center; grid-column: 1 / -1; padding: 40px 0; color: #757575; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class="header"><a href="index.html" class="back-btn">← К вещам</a><h1>Каталог окрасов Исчезнувшего ЗЯ (ИЗЯ)</h1></div>
+    <div class="container">
+        <div class="filter-panel">
+            <div class="filter-group"><label>Название масти</label><input type="text" id="searchTitle" class="filter-control" placeholder="Поиск по названию..."></div>
+            <div class="filter-group"><label>Автор</label><input type="text" id="searchAuthor" class="filter-control" placeholder="Никнейм..."></div>
+            <div class="filter-group"><label>Вид лошади</label><select id="filterType" class="filter-control"><option value="all">Все виды</option><option value="верховая">Верховая лошадь</option><option value="пегас">Пегас</option><option value="единорог">Единорог</option><option value="пони">Пони</option><option value="осел">Осел</option></select></div>
+            <div class="filter-group"><label>Копии</label><select id="filterCopies" class="filter-control"><option value="all">Любое число</option><option value="100">100 копий</option><option value="200">200 копий</option><option value="unlimited">Безлимитные</option></select></div>
+        </div>
+        <div class="grid" id="coatsContainer"></div>
+    </div>
+    <script>
+        // Сюда добавляйте окрасы строго для ИСЧЕЗНУВШЕГО ЗОЛОТОГО ЯБЛОКА
+        const coats = [
+            { name: "Винтажный Мустанг", author: "OldPlayer", type: "верховая", copies: "100", price: "25₽", count: "50 шт", image: "https://ibb.co" },
+            { name: "Древний Ослик", author: "RetroLover", type: "осел", copies: "100", price: "40₽", count: "2 шт", image: "https://ibb.co" }
+        ];
+
+        function displayCoats(filteredCoats) {
+            const container = document.getElementById('coatsContainer'); container.innerHTML = '';
+            if(filteredCoats.length === 0) { container.innerHTML = `<div class="no-results">Масти не найдены 🐴</div>`; return; }
+            filteredCoats.forEach(coat => {
+                const copiesText = coat.copies === 'unlimited' ? 'Безлимитные' : coat.copies + ' шт.';
+                container.innerHTML += `
+                    <div class="coat-card">
+                        <div class="coat-img"><img src="${coat.image}" alt="${coat.name}"></div>
+                        <div class="coat-info">
+                            <div class="coat-title">${coat.name}</div>
+                            <div class="coat-detail">Автор: <strong>${coat.author}</strong></div>
+                            <div class="coat-detail">Вид: <strong>${coat.type}</strong></div>
+                            <div class="coat-detail">Копии: <strong>${copiesText}</strong></div>
+                            <div class="coat-detail">В наличии: <strong>${coat.count}</strong></div>
+                            <div class="coat-price">Цена: ${coat.price}</div>
+                        </div>
+                    </div>`;
+            });
+        }
+
+        function filterCoats() {
+            const fTitle = document.getElementById('searchTitle').value.toLowerCase();
+            const fAuthor = document.getElementById('searchAuthor').value.toLowerCase();
+            const fType = document.getElementById('filterType').value;
+            const fCopies = document.getElementById('filterCopies').value;
+
+            const filtered = coats.filter(coat => {
+                return coat.name.toLowerCase().includes(fTitle) &&
+                       coat.author.toLowerCase().includes(fAuthor) &&
+                       (fType === 'all' || coat.type === fType) &&
+                       (fCopies === 'all' || coat.copies === fCopies);
+            });
+            displayCoats(filtered);
+        }
+
+        document.getElementById('searchTitle').addEventListener('input', filterCoats);
+        document.getElementById('searchAuthor').addEventListener('input', filterCoats);
+        document.getElementById('filterType').addEventListener('change', filterCoats);
+        document.getElementById('filterCopies').addEventListener('change', filterCoats);
+        displayCoats(coats);
+    </script>
+</body>
+</html>
