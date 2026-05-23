@@ -147,32 +147,41 @@
     </div>
     
     <script>
-        // 1. ЗАГРУЗКА ДАННЫХ ИЗ ЕДИНОГО JSON ДЛЯ ЗЯ
-        let coats = []; 
+        let coats = []; // Список заполнится из JSON файла
         let cart = [];
         let selectedTag = 'all'; 
 
+        // 1. АСИНХРОННАЯ ЗАГРУЗКА БАЗЫ ДАННЫХ ДЛЯ ЗЯ
         async function loadDatabase() {
             try {
-                const response = await fetch('./database.json');
+                // Добавляем маркер времени ?t=..., чтобы защититься от кэша браузера
+                const response = await fetch('database.json?t=' + Date.now());
                 const allData = await response.json();
                 
                 // Фильтруем товары строго по категории "zy"
                 coats = allData.filter(item => item.category === 'zy');
                 
+                // Восстанавливаем данные сквозной корзины
+                cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
+                updateCartBadge();
+                
+                // Включаем слежку за фильтрами только после загрузки базы
+                initListeners();
+                
+                // Отрисовываем масти на экране
                 filterCoats();
             } catch (error) {
                 console.error("Ошибка загрузки базы ЗЯ:", error);
+                document.getElementById('coatsContainer').innerHTML = '<div class="no-results">Ошибка подключения к базе данных. Проверьте файл database.json</div>';
             }
         }
 
-
-        // 2. ОТРИСОВКА КАРТОЧЕК С УЧЕТОМ ИЗБРАННОГО СВЕРХУ
+        // 2. ОТРИСОВКА КАРТОЧЕК С УЧЕТОМ СЕРДЕЧЕК (Строка с копиями тут отсутствует)
         function displayCoats(filteredCoats) {
             const container = document.getElementById('coatsContainer'); 
             container.innerHTML = '';
             
-            if(filteredCoats.length === 0) { 
+            if(!filteredCoats || filteredCoats.length === 0) { 
                 container.innerHTML = '<div class="no-results">Масти не найдены 🐴</div>'; 
                 return; 
             }
@@ -189,7 +198,7 @@
 
                 const isFav = favorites.includes(coat.id);
                 const favClass = isFav ? 'active' : '';
-                const originalIndex = coats.findIndex(c => c.name === coat.name && c.author === coat.author);
+                const originalIndex = coats.findIndex(c => c.id === coat.id);
 
                 container.innerHTML += `
                     <div class="coat-card">
@@ -217,12 +226,17 @@
                     </div>`;
             });
         }
-        // 3. УМНЫЙ ФИЛЬТР + СОРТИРОВКА + ПОИСК ПО ТЕГАМ И ИЗБРАННОМУ (БЕЗ КОПИЙ)
+        // 3. УМНЫЙ ФИЛЬТР И СОРТИРОВКА ДЛЯ ЗЯ (БЕЗ КОПИЙ)
         function filterCoats() {
-            const fTitle = document.getElementById('searchTitle').value.toLowerCase();
-            const fAuthor = document.getElementById('searchAuthor').value.toLowerCase();
-            const fType = document.getElementById('filterType').value;
-            const sortBy = document.getElementById('sortControl').value;
+            const searchTitleEl = document.getElementById('searchTitle');
+            const searchAuthorEl = document.getElementById('searchAuthor');
+            const filterTypeEl = document.getElementById('filterType');
+            const sortControlEl = document.getElementById('sortControl');
+
+            const fTitle = searchTitleEl ? searchTitleEl.value.toLowerCase() : '';
+            const fAuthor = searchAuthorEl ? searchAuthorEl.value.toLowerCase() : '';
+            const fType = filterTypeEl ? filterTypeEl.value : 'all';
+            const sortBy = sortControlEl ? sortControlEl.value : 'default';
             
             const favorites = JSON.parse(localStorage.getItem('lowadi_favorites')) || [];
 
@@ -246,7 +260,7 @@
             if (sortBy === 'new') {
                 res.sort((a, b) => (b.status === 'new') - (a.status === 'new'));
             } else if (sortBy === 'hot') {
-                res.sort((a, b) => b.views - a.views);
+                res.sort((a, b) => (b.views || 0) - (a.views || 0));
             } else if (sortBy === 'rare') {
                 res.sort((a, b) => parseInt(a.count) - parseInt(b.count));
             }
@@ -264,22 +278,27 @@
         // 4. ДОБАВЛЕНИЕ/УДАЛЕНИЕ ИЗ ИЗБРАННОГО
         function toggleFavorite(coatId, buttonElement) {
             let favorites = JSON.parse(localStorage.getItem('lowadi_favorites')) || [];
+            let favoritesObjects = JSON.parse(localStorage.getItem('lowadi_favorites_objects')) || [];
             
+            const coat = coats.find(c => c.id === coatId);
+            if (!coat) return;
+
             if (favorites.includes(coatId)) {
                 favorites = favorites.filter(id => id !== coatId);
+                favoritesObjects = favoritesObjects.filter(item => item.id !== coatId);
                 buttonElement.classList.remove('active');
                 showToast(`💔 Удалено из избранного`);
             } else {
                 favorites.push(coatId);
+                const coatCopy = {...coat, catalog: 'ЗЯ'};
+                favoritesObjects.push(coatCopy);
                 buttonElement.classList.add('active');
                 showToast(`❤️ Добавлено в избранное!`);
             }
             
             localStorage.setItem('lowadi_favorites', JSON.stringify(favorites));
-            
-            if (selectedTag === 'favorites') {
-                filterCoats();
-            }
+            localStorage.setItem('lowadi_favorites_objects', JSON.stringify(favoritesObjects));
+            if (selectedTag === 'favorites') filterCoats();
         }
 
         function showToast(text) {
@@ -294,7 +313,7 @@
                 setTimeout(() => toast.remove(), 400);
             }, 2500);
         }
-        // 5. ЛОГИКА РАБОТЫ КОРЗИНЫ И ЧЕКОВ
+        // 5. РАБОТА КОРЗИНЫ И ОФОРМЛЕНИЯ ЗАКАЗА
         function toggleCart() {
             const sidebar = document.getElementById('cartSidebar'); const overlay = document.getElementById('cartOverlay');
             if (sidebar.classList.contains('open')) { sidebar.classList.remove('open'); overlay.classList.remove('open'); } 
@@ -302,12 +321,13 @@
         }
 
         function addCoatToCart(index, parentName, parentImg) {
+            if (index < 0 || index >= coats.length) return;
             const coat = coats[index]; cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
             const existItem = cart.find(i => i.isCoat && i.coatName === coat.name && i.coatAuthor === coat.author);
             if (existItem) { existItem.quantity += 1; } 
-            else { cart.push({ id: 'zy-' + index + '-' + Date.now(), name: parentName, coatName: coat.name, coatAuthor: coat.author, price: parseInt(coat.price) || 0, image: coat.image, quantity: 1, isCoat: true }); }
+            else { cart.push({ id: 'zy-' + coat.id + '-' + Date.now(), name: parentName, coatName: coat.name, coatAuthor: coat.author, price: parseInt(coat.price) || 0, image: coat.image, quantity: 1, isCoat: true }); }
             localStorage.setItem('lowadi_cart', JSON.stringify(cart)); updateCartBadge();
-            let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.innerHTML = `🛒 Окрас "${coat.name}" добавлен к заказазу ${parentName}!`; document.body.appendChild(toast);
+            let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.innerHTML = `🛒 Окрас "${coat.name}" добавлен к заказу ${parentName}!`; document.body.appendChild(toast);
             setTimeout(() => toast.classList.add('show'), 100); setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 3000);
         }
 
@@ -342,14 +362,14 @@
                 let toast = document.createElement('div'); toast.className = 'toast-notification'; toast.style.backgroundColor = '#0077FF'; toast.innerHTML = `📋 Чек заказа скопирован! Просто вставьте его в чат.`; document.body.appendChild(toast);
                 setTimeout(() => toast.classList.add('show'), 100); setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 4000);
             }).catch(err => { console.log('Ошибка: ', err); });
-            const telegramUrl = `https://t.me/Kaneri_Mio`; const vkUrl = `https://vk.com/im/convo/582816715?tab=all`;
+            const telegramUrl = `https://t.me`; const vkUrl = `https://vk.com`;
             document.getElementById('customAlertText').innerHTML = `<div style="font-size:14px; color:#2e7d32; font-weight:bold; margin-bottom:15px; background:#e8f5e9; padding:8px; border-radius:6px;">📋 Весь список товаров уже автоматически скопирован!</div>Выберите платформу, перейдите в чат и просто нажмите <b>Вставить (Ctrl + V)</b>:<br><br><a href="${telegramUrl}" target="_blank" class="social-connect-btn tg">✈️ Перейти в Telegram</a><a href="${vkUrl}" target="_blank" class="social-connect-btn vk">💬 Перейти ВКонтакте</a>`;
             document.getElementById('alertOverlay').style.display = 'block'; const alertBox = document.getElementById('customAlert'); alertBox.style.display = 'block'; setTimeout(() => alertBox.classList.add('show'), 10);
         }
 
         function renderCart() {
             const listContainer = document.getElementById('cartItemsList'); listContainer.innerHTML = ''; let totalSum = 0; cart = JSON.parse(localStorage.getItem('lowadi_cart')) || [];
-            if (cart.length === 0) { listContainer.innerHTML = '<div style="text-align:center; color:#757575; margin-top:40px;">Корзина пока пуста 🐴</div>'; document.getElementById('cartTotalPrice').innerText = '0₽'; return; }
+            if (cart.length === 0) { listContainer.innerHTML = '<div style="text-align:center; color:#757575; margin-top:40px;">Корзина пока пуста 👑</div>'; document.getElementById('cartTotalPrice').innerText = '0₽'; return; }
             cart.forEach(item => {
                 const itemTotal = item.price * item.quantity; totalSum += itemTotal; const descriptionText = item.isCoat ? `<div style="font-size: 12px; color: #8d6e63; margin-top: 2px;">Окрас: <strong>${item.coatName}</strong><br>Автор: <strong>${item.coatAuthor}</strong></div>` : '';
                 listContainer.innerHTML += `<div style="display: flex; align-items: center; gap: 15px; background: #fafafa; padding: 10px; border-radius: 8px; border: 1px solid #efebe9;"><img src="${item.image}" style="width: 50px; height: 50px; object-fit: contain;"><div style="flex-grow: 1;"><div style="font-weight: bold; font-size: 14px; color: #3e2723;">${item.name}</div>${descriptionText}<div style="font-size: 15px; font-weight: bold; color: #2e7d32; margin-top: 4px;">${itemTotal}₽</div></div><div style="display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #d7ccc8; border-radius: 6px; padding: 2px 5px;"><button onclick="changeQuantity('${item.id}', -1)" style="background: none; border: none; font-size: 16px; cursor: pointer; font-weight: bold; color: #757575;">-</button><span style="font-weight: bold; font-size: 14px;">${item.quantity}</span><button onclick="changeQuantity('${item.id}', 1)" style="background: none; border: none; font-size: 16px; cursor: pointer; font-weight: bold; color: #757575;">+</button></div></div>`;
@@ -357,31 +377,21 @@
             document.getElementById('cartTotalPrice').innerText = totalSum + '₽';
         }
 
-        // 6. ЗАПУСК И СЛУШАТЕЛИ СОБЫТИЙ
-        window.addEventListener('load', () => { 
-            cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; 
-            updateCartBadge(); 
-        });
+        // Инициализация слушателей для ЗЯ
+        function initListeners() {
+            const searchTitleEl = document.getElementById('searchTitle');
+            const searchAuthorEl = document.getElementById('searchAuthor');
+            const filterTypeEl = document.getElementById('filterType');
+            const sortControlEl = document.getElementById('sortControl');
 
-        document.getElementById('searchTitle').addEventListener('input', filterCoats);
-        document.getElementById('searchAuthor').addEventListener('input', filterCoats);
-        document.getElementById('filterType').addEventListener('change', filterCoats);
-        document.getElementById('sortControl').addEventListener('change', filterCoats);
-        
-        async function loadDatabase() {
-            try {
-                const response = await fetch('database.json');
-                const allData = await response.json();
-                
-                // Фильтруем товары строго по категории "zy"
-                coats = allData.filter(item => item.category === 'zy');
-                
-                // ВАЖНО: принудительно выводим полученные данные на экран
-                displayCoats(coats);
-            } catch (error) {
-                console.error("Ошибка загрузки базы ЗЯ:", error);
-            }
+            if(searchTitleEl) searchTitleEl.addEventListener('input', filterCoats);
+            if(searchAuthorEl) searchAuthorEl.addEventListener('input', filterCoats);
+            if(filterTypeEl) filterTypeEl.addEventListener('change', filterCoats);
+            if(sortControlEl) sortControlEl.addEventListener('change', filterCoats);
         }
+
+        // Запуск
+        window.addEventListener('DOMContentLoaded', loadDatabase);
     </script>
 </body>
 </html>
