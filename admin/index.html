@@ -1,57 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Панель управления — Kaneri Mio Company</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaneri Mio CMS</title>
 </head>
 
 <body>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- Netlify Identity -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-    <script>
-        CMS.init({
-            config: {
-                backend: {
-                    name: 'git-gateway',
-                    branch: 'main'
-                },
-
-                media_folder: 'images',
-                public_folder: '/images',
-
-                collections: [
-                    {
-                        name: 'coats',
-                        label: 'Окрасы Lowadi',
-                        file: 'database.json',
-                        format: 'json',
-
-                        fields: [
-                            { label: 'ID', name: 'id', widget: 'string' },
-                            { label: 'Название', name: 'name', widget: 'string' },
-                            { label: 'Автор', name: 'author', widget: 'string' }
-                        ]
-                    }
-                ]
-            }
-        });
-
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
-
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
