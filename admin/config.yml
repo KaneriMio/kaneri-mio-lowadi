@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: KaneriMio/kaneri-mio-lowadi
+  branch: main
+
+media_folder: images
+public_folder: images
+
+collections:
+  - name: coats
+    label: Окрасы Lowadi
+    label_singular: Окрас
+    file: database.json
+    format: json
+    fields:
+      - { label: "Уникальный ID", name: id, widget: string }
+      - { label: "Название масти", name: name, widget: string }
+      - { label: "Никнейм Автора", name: author, widget: string }
+      - { label: "Вид лошади", name: type, widget: string }
+      - { label: "Цена", name: price, widget: string }
+      - { label: "Количество в наличии", name: count, widget: string }
+      - { label: "Загрузить картинку", name: image, widget: image }
+      - { label: "Каталог (zy или izzy)", name: category, widget: string }
