@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: KaneriMio/kaneri-mio-lowadi # <- ЗАМЕНИТЕ НА ВАШИ ДАННЫЕ!
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  # КОЛЛЕКЦИЯ 1: ОКРАСЫ (ЗЯ / ИЗЯ)
+  - name: "coats"
+    label: "Окрасы Lowadi"
+    label_singular: "Окрас"
+    file: "database.json"
+    format: "json"
+    fields:
+      - { label: "Уникальный ID (латиницей, без пробелов)", name: "id", widget: "string" }
+      - { label: "Название масти", name: "name", widget: "string" }
+      - { label: "Никнейм Автора", name: "author", widget: "string" }
+      - { label: "Вид лошади", name: "type", widget: "select", options: ["верховая", "пегас", "единорог", "пони", "осел"] }
+      - { label: "Копии (только для ИЗЯ, например: 100)", name: "copies", widget: "string", required: false }
+      - { label: "Цена (например: 15₽)", name: "price", widget: "string" }
+      - { label: "Количество в наличии (например: 2 шт)", name: "count", widget: "string" }
+      - { label: "Загрузить картинку окраса", name: "image", widget: "image" }
+      - { label: "Статус-Badge (метка)", name: "status", widget: "select", options: ["none", "new", "limited"], default: "none" }
+      - { label: "Ключевые слова темы (через запятую)", name: "tags", widget: "list" }
+      - { label: "Начальное число просмотров", name: "views", widget: "number", value_type: "int", default: 0 }
+      - { label: "Каталог размещения", name: "category", widget: "select", options: [{label: "Золотое Яблоко (ЗЯ)", value: "zy"}, {label: "Исчезнувшее ЗЯ (ИЗЯ)", value: "izzy"}] }
+      # Новое поле: Флажки выбора серверов для окрасов
+      - label: "Доступные сервера"
+        name: "servers"
+        widget: "list"
+        field: { name: "server", widget: "select", options: ["РУ (Русский)", "ИНТ (Интернациональный)", "ИСП (Испанский)", "ФРА (Французский)"] }
+
+  # КОЛЛЕКЦИЯ 2: ОБЫЧНЫЕ ПРЕДМЕТЫ НА ГЛАВНОЙ СТРАНИЦЕ
+  - name: "items"
+    label: "Предметы на главной"
+    label_singular: "Предмет"
+    file: "items.json" # Мы создадим этот файл для главной страницы
+    format: "json"
+    fields:
+      - { label: "Уникальный ID предмета (например: rog_izobiliya)", name: "id", widget: "string" }
+      - { label: "Название предмета", name: "name", widget: "string" }
+      - { label: "Категория", name: "category", widget: "select", options: [{label: "Черный рынок", value: "black_market"}, {label: "ЗЯ", value: "zy"}, {label: "ИЗЯ", value: "izzy"}] }
+      - { label: "Краткое описание предмета", name: "description", widget: "text" }
+      - { label: "Цена предмета (например: 12₽)", name: "price", widget: "string" }
+      - { label: "Количество в наличии (например: 5 шт)", name: "count", widget: "string" }
+      - { label: "Картинка предмета", name: "image", widget: "image" }
+      # Флажки выбора серверов для обычных предметов
+      - label: "Доступные сервера"
+        name: "servers"
+        widget: "list"
+        field: { name: "server", widget: "select", options: ["РУ (Русский)", "ИНТ (Интернациональный)", "ИСП (Испанский)", "ФРА (Французский)"] }
