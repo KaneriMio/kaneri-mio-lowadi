@@ -4,11 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Панель управления — Kaneri Mio Company</title>
-    <!-- Подключаем самую стабильную и современную версию админки -->
+    <!-- Подключаем самую стабильную версию админки -->
     <script src="https://unpkg.com"></script>
     <!-- Подключаем виджет входа Netlify -->
     </script>
 </head>
 <body>
+    <script>
+        // Передаем настройки админки напрямую в JavaScript, минуя капризный config.yml
+        CMS.init({
+            config: {
+                backend: {
+                    name: 'github',
+                    repo: 'KaneriMio/kaneri-mio-lowadi',
+                    branch: 'main'
+                },
+                media_folder: 'images',
+                public_folder: 'images',
+                collections: [
+                    {
+                        name: 'coats',
+                        label: 'Окрасы Lowadi',
+                        label_singular: 'Окрас',
+                        file: 'database.json',
+                        format: 'json',
+                        fields: [
+                            { label: 'Уникальный ID (латиницей, без пробелов)', name: 'id', widget: 'string' },
+                            { label: 'Название масти', name: 'name', widget: 'string' },
+                            { label: 'Никнейм Автора', name: 'author', widget: 'string' },
+                            { label: 'Вид лошади', name: 'type', widget: 'select', options: ['верховая', 'пегас', 'единорог', 'пони', 'осел'] },
+                            { label: 'Копии (только для ИЗЯ)', name: 'copies', widget: 'string', required: false },
+                            { label: 'Цена (например: 15₽)', name: 'price', widget: 'string' },
+                            { label: 'Количество в наличии (например: 2 шт)', name: 'count', widget: 'string' },
+                            { label: 'Загрузить картинку окраса', name: 'image', widget: 'image' },
+                            { label: 'Статус-Badge (метка)', name: 'status', widget: 'select', options: ['none', 'new', 'limited'], default: 'none' },
+                            { label: 'Ключевые слова темы', name: 'tags', widget: 'list' },
+                            { label: 'Начальное число просмотров', name: 'views', widget: 'number', value_type: 'int', default: 0 },
+                            { label: 'Каталог размещения', name: 'category', widget: 'select', options: [{label: 'Золотое Яблоко (ЗЯ)', value: 'zy'}, {label: 'Исчезнувшее ЗЯ (ИЗЯ)', value: 'izzy'}] },
+                            {
+                                label: 'Доступные сервера',
+                                name: 'servers',
+                                widget: 'list',
+                                field: { name: 'server', widget: 'select', options: ['РУ (Русский)', 'ИНТ (Интернациональный)', 'ИСП (Испанский)', 'ФРА (Французский)'] }
+                            }
+                        ]
+                    },
+                    {
+                        name: 'items',
+                        label: 'Предметы на главной',
+                        label_singular: 'Предмет',
+                        file: 'items.json',
+                        format: 'json',
+                        fields: [
+                            { label: 'Уникальный ID предмета', name: 'id', widget: 'string' },
+                            { label: 'Название предмета', name: 'name', widget: 'string' },
+                            { label: 'Категория', name: 'category', widget: 'select', options: [{label: 'Черный рынок', value: 'black_market'}, {label: 'ЗЯ', value: 'zy'}, {label: 'ИЗЯ', value: 'izzy'}] },
+                            { label: 'Краткое описание предмета', name: 'description', widget: 'text' },
+                            { label: 'Цена предмета', name: 'price', widget: 'string' },
+                            { label: 'Количество в наличии', name: 'count', widget: 'string' },
+                            { label: 'Картинка предмета', name: 'image', widget: 'image' },
+                            {
+                                label: 'Доступные сервера',
+                                name: 'servers',
+                                widget: 'list',
+                                field: { name: 'server', widget: 'select', options: ['РУ (Русский)', 'ИНТ (Интернациональный)', 'ИСП (Испанский)', 'ФРА (Французский)'] }
+                            }
+                        ]
+                    }
+                ]
+            }
+        });
+    </script>
 </body>
 </html>
