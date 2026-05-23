@@ -153,38 +153,27 @@
     </div>
     
     <script>
-        // 1. БАЗА ДАННЫХ ИЗЯ
-        const coats = [
-            { 
-                id: "izzy_001",
-                name: "Винтажный Мустанг", 
-                author: "OldPlayer", 
-                type: "верховая", 
-                copies: "100", 
-                price: "25₽", 
-                count: "50 шт", 
-                image: "https://ibb.co", 
-                status: "new",       
-                tags: ["милый"],     
-                views: 15            
-            },
-            { 
-                id: "izzy_002",
-                name: "Древний Ослик", 
-                author: "RetroLover", 
-                type: "осел", 
-                copies: "100", 
-                price: "40₽", 
-                count: "2 шт", 
-                image: "https://ibb.co", 
-                status: "limited",   
-                tags: ["готика", "животные"], 
-                views: 42 
-            }
-        ];
-
+        // 1. ЗАГРУЗКА ДАННЫХ ИЗ ЕДИНОГО JSON-ФАЙЛА
+        let coats = []; // Изначально список пустой, мы заполним его из файла
         let cart = [];
         let selectedTag = 'all'; 
+
+        // Специальная функция, которая скачивает базу данных
+        async function loadDatabase() {
+            try {
+                const response = await fetch('database.json');
+                const allData = await response.json();
+                
+                // Оставляем только те товары, у которых категория строго "izzy"
+                coats = allData.filter(item => item.category === 'izzy');
+                
+                // Когда товары скачались — принудительно запускаем их вывод на экран
+                filterCoats();
+            } catch (error) {
+                console.error("Ошибка загрузки базы данных окрасов:", error);
+            }
+        }
+
 
         // 2. ОТРИСОВКА КАРТОЧЕК
         function displayCoats(filteredCoats) {
@@ -391,7 +380,8 @@
         document.getElementById('filterCopies').addEventListener('change', filterCoats);
         document.getElementById('sortControl').addEventListener('change', filterCoats);
         
-        filterCoats();
+loadDatabase(); // Теперь при старте сначала качается файл, а потом включаются фильтры
+
     </script>
 </body>
 </html>

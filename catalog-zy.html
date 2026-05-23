@@ -147,36 +147,25 @@
     </div>
     
     <script>
-        // 1. БАЗА ДАННЫХ ЗОЛОТОГО ЯБЛОКА (ЗЯ)
-        const coats = [
-            { 
-                id: "zy_001",
-                name: "Огненный Элементаль", 
-                author: "MioCreator", 
-                type: "единорог", 
-                price: "15₽", 
-                count: "2 шт", 
-                image: "https://ibb.co",
-                status: "new", 
-                tags: ["милый", "животные"],
-                views: 28 
-            },
-            { 
-                id: "zy_002",
-                name: "Небесный Альбатрос", 
-                author: "Kaneri", 
-                type: "пегас", 
-                price: "15₽", 
-                count: "1 шт", 
-                image: "https://ibb.co", 
-                status: "limited", 
-                tags: ["готика", "животные"],
-                views: 54
-            }
-        ];
-
+        // 1. ЗАГРУЗКА ДАННЫХ ИЗ ЕДИНОГО JSON ДЛЯ ЗЯ
+        let coats = []; 
         let cart = [];
         let selectedTag = 'all'; 
+
+        async function loadDatabase() {
+            try {
+                const response = await fetch('database.json');
+                const allData = await response.json();
+                
+                // Фильтруем товары строго по категории "zy"
+                coats = allData.filter(item => item.category === 'zy');
+                
+                filterCoats();
+            } catch (error) {
+                console.error("Ошибка загрузки базы ЗЯ:", error);
+            }
+        }
+
 
         // 2. ОТРИСОВКА КАРТОЧЕК С УЧЕТОМ ИЗБРАННОГО СВЕРХУ
         function displayCoats(filteredCoats) {
@@ -379,7 +368,8 @@
         document.getElementById('filterType').addEventListener('change', filterCoats);
         document.getElementById('sortControl').addEventListener('change', filterCoats);
         
-        filterCoats();
+loadDatabase(); // Теперь при старте сначала качается файл, а потом включаются фильтры
+
     </script>
 </body>
 </html>

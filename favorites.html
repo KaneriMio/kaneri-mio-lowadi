@@ -114,17 +114,22 @@
     
     <script>
         // 1. ОБЩАЯ СИНХРОННАЯ БАЗА ДАННЫХ ДЛЯ ПРОВЕРКИ (Собирает товары ЗЯ и ИЗЯ вместе)
-        const allCoats = [
-            // Товары из Золотого Яблока (ЗЯ)
-            { id: "zy_001", name: "Огненный Элементаль", author: "MioCreator", type: "единорог", price: "15₽", count: "2 шт", image: "https://ibb.co", catalogName: "ЗЯ", catalogClass: "bg-zy" },
-            { id: "zy_002", name: "Небесный Альбатрос", author: "Kaneri", type: "пегас", price: "15₽", count: "1 шт", image: "https://ibb.co", catalogName: "ЗЯ", catalogClass: "bg-zy" },
-            
-            // Товары из Исчезнувшего Золотого Яблока (ИЗЯ)
-            { id: "izzy_001", name: "Винтажный Мустанг", author: "OldPlayer", type: "верховая", copies: "100", price: "25₽", count: "50 шт", image: "https://ibb.co", catalogName: "ИЗЯ", catalogClass: "bg-izzy" },
-            { id: "izzy_002", name: "Древний Ослик", author: "RetroLover", type: "осел", copies: "100", price: "40₽", count: "2 шт", image: "https://ibb.co", catalogName: "ИЗЯ", catalogClass: "bg-izzy" }
-        ];
-
+        // 1. ЗАГРУЗКА ОБЩЕЙ БАЗЫ ДАННЫХ ДЛЯ ИЗБРАННОГО
+        let allCoats = []; 
         let cart = [];
+
+        async function loadDatabase() {
+            try {
+                const response = await fetch('database.json');
+                allCoats = await response.json();
+                
+                // После успешного скачивания запускаем отрисовку любимых мастей
+                renderFavorites();
+            } catch (error) {
+                console.error("Ошибка загрузки базы для Избранного:", error);
+            }
+        }
+
 
         // 2. СБОРКА И ОТРИСОВКА Окрасов, которые лайкнул пользователь
         function renderFavorites() {
@@ -292,11 +297,13 @@
         }
 
         // 6. СТАРТ СТРАНИЦЫ
+        // Измените блок старта страницы в самом низу
         window.addEventListener('load', () => { 
             cart = JSON.parse(localStorage.getItem('lowadi_cart')) || []; 
             updateCartBadge(); 
-            renderFavorites(); 
+            loadDatabase(); // Запускаем скачивание базы вместо renderFavorites()
         });
+
     </script>
 </body>
 </html>
