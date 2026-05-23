@@ -4,11 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Панель управления — Kaneri Mio Company</title>
-    <!-- Официальный, стабильный и неблокируемый скрипт админки -->
-    <script src="https://unpkg.com@^2.10.192/dist/netlify-cms.js"></script>
     
     </script>
 </head>
 <body>
+    <!-- Подключаем скрипт админки в тело страницы по официальному стандарту -->
+    <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+        // Запускаем инициализацию напрямую через JavaScript
+        CMS.init({
+            config: {
+                backend: {
+                    name: 'git-gateway',
+                    branch: 'main'
+                },
+                media_folder: 'images',
+                public_folder: 'images',
+                collections: [
+                    {
+                        name: 'coats',
+                        label: 'Окрасы Lowadi',
+                        label_singular: 'Окрас',
+                        file: 'database.json',
+                        format: 'json',
+                        fields: [
+                            { label: 'Уникальный ID (латиницей)', name: 'id', widget: 'string' },
+                            { label: 'Название масти', name: 'name', widget: 'string' },
+                            { label: 'Никнейм Автора', name: 'author', widget: 'string' },
+                            { label: 'Вид лошади', name: 'type', widget: 'select', options: ['верховая', 'пегас', 'единорог', 'пони', 'осел'] },
+                            { label: 'Копии (только для ИЗЯ)', name: 'copies', widget: 'string', required: false },
+                            { label: 'Цена', name: 'price', widget: 'string' },
+                            { label: 'Количество в наличии', name: 'count', widget: 'string' },
+                            { label: 'Загрузить картинку окраса', name: 'image', widget: 'image' },
+                            { label: 'Статус-Badge (метка)', name: 'status', widget: 'select', options: ['none', 'new', 'limited'], default: 'none' },
+                            { label: 'Ключевые слова темы', name: 'tags', widget: 'list' },
+                            { label: 'Начальное число просмотров', name: 'views', widget: 'number', value_type: 'int', default: 0 },
+                            { 
+                                label: 'Каталог размещения', 
+                                name: 'category', 
+                                widget: 'select', 
+                                options: [
+                                    { label: 'Золотое Яблоко (ЗЯ)', value: 'zy' }, 
+                                    { label: 'Исчезнувшее ЗЯ (ИЗЯ)', value: 'izzy' }
+                                ] 
+                            },
+                            {
+                                label: 'Доступные сервера',
+                                name: 'servers',
+                                widget: 'list',
+                                field: { name: 'server', widget: 'select', options: ['РУ (Русский)', 'ИНТ (Интернациональный)', 'ИСП (Испанский)', 'ФРА (Французский)'] }
+                            }
+                        ]
+                    },
+                    {
+                        name: 'items',
+                        label: 'Предметы на главной',
+                        label_singular: 'Предмет',
+                        file: 'items.json',
+                        format: 'json',
+                        fields: [
+                            { label: 'Уникальный ID предмета', name: 'id', widget: 'string' },
+                            { label: 'Название предмета', name: 'name', widget: 'string' },
+                            { label: 'Категория', name: 'category', widget: 'select', options: ['black_market', 'zy', 'izzy'] },
+                            { label: 'Краткое описание предмета', name: 'description', widget: 'text' },
+                            { label: 'Цена предмета', name: 'price', widget: 'string' },
+                            { label: 'Количество в наличии', name: 'count', widget: 'string' },
+                            { label: 'Картинка предмета', name: 'image', widget: 'image' },
+                            {
+                                label: 'Доступные сервера',
+                                name: 'servers',
+                                widget: 'list',
+                                field: { name: 'server', widget: 'select', options: ['РУ (Русский)', 'ИНТ (Интернациональный)', 'ИСП (Испанский)', 'ФРА (Французский)'] }
+                            }
+                        ]
+                    }
+                ]
+            }
+        });
+
+        // Бесшовный шлюз авторизации Netlify Identity
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "./";
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 </html>
