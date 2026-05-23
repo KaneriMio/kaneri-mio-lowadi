@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: KaneriMio/kaneri-mio-lowadi
+  name: git-gateway
   branch: main
 
 media_folder: "images"
