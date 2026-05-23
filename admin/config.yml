@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: KaneriMio/kaneri-mio-lowadi
   branch: main
+  base_url: https://vercel.app
 
 media_folder: "images"
 public_folder: "/images"
