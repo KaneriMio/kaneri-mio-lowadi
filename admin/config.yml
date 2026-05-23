@@ -2,7 +2,8 @@ backend:
   name: github
   repo: KaneriMio/kaneri-mio-lowadi
   branch: main
-  base_url: https://decap-cms-oauth-provider.vercel.app
+  auth_type: pkce
+  app_id: Ov23lidAKbylTfwCz5AT
 
 media_folder: "images"
 public_folder: "/images"
