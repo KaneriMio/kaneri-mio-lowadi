@@ -136,6 +136,7 @@
         .srv-unknown { background-color: #7f8c8d; } 
 
     </style>
+</script>
 </head>
 <body>
     <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
@@ -386,6 +387,15 @@
 
         // 5. ЗАПУСК ГЛАВНОЙ СТРАНИЦЫ ПРИ ЗАГРУЗКЕ DOM
         window.addEventListener('DOMContentLoaded', loadMainItems);
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
 
     </script>
 </body>
