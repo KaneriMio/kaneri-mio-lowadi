@@ -8,19 +8,25 @@ public_folder: "/images"
 collections:
   - name: "coats"
     label: "Окрасы Lowadi"
-    file: "database.json"
-    format: "json"
 
-    fields:
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Название", name: "name", widget: "string" }
-      - { label: "Автор", name: "author", widget: "string" }
+    files:
+      - label: "База окрасов"
+        name: "database"
+        file: "database.json"
+
+        fields:
+          - { label: "ID", name: "id", widget: "string" }
+          - { label: "Название", name: "name", widget: "string" }
+          - { label: "Автор", name: "author", widget: "string" }
 
   - name: "items"
     label: "Предметы"
-    file: "items.json"
-    format: "json"
 
-    fields:
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Название", name: "name", widget: "string" }
+    files:
+      - label: "База предметов"
+        name: "items"
+        file: "items.json"
+
+        fields:
+          - { label: "ID", name: "id", widget: "string" }
+          - { label: "Название", name: "name", widget: "string" }
