@@ -161,7 +161,7 @@
         // Специальная функция, которая скачивает базу данных
         async function loadDatabase() {
             try {
-                const response = await fetch('database.json');
+                const response = await fetch('./database.json');
                 const allData = await response.json();
                 
                 // Оставляем только те товары, у которых категория строго "izzy"

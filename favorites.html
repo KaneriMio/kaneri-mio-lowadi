@@ -120,7 +120,7 @@
 
         async function loadDatabase() {
             try {
-                const response = await fetch('database.json');
+                const response = await fetch('./database.json');
                 allCoats = await response.json();
                 
                 // После успешного скачивания запускаем отрисовку любимых мастей
