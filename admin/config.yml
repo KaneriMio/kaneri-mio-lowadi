@@ -2,7 +2,8 @@ backend:
   name: github
   repo: KaneriMio/kaneri-mio-lowadi
   branch: main
-  base_url: https://vercel.app
+  base_url: https://kaneri-mio-lowadi.vercel.app/
+  auth_endpoint: /api/auth
 
 media_folder: "images"
 public_folder: "/images"
