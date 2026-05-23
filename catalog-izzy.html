@@ -380,8 +380,20 @@
         document.getElementById('filterCopies').addEventListener('change', filterCoats);
         document.getElementById('sortControl').addEventListener('change', filterCoats);
         
-loadDatabase(); // Теперь при старте сначала качается файл, а потом включаются фильтры
-
+        async function loadDatabase() {
+            try {
+                const response = await fetch('./database.json');
+                const allData = await response.json();
+                
+                // Фильтруем товары строго по категории "izzy"
+                coats = allData.filter(item => item.category === 'izzy');
+                
+                // ВАЖНО: принудительно выводим полученные данные на экран
+                displayCoats(coats);
+            } catch (error) {
+                console.error("Ошибка загрузки базы ИЗЯ:", error);
+            }
+        }
     </script>
 </body>
 </html>
