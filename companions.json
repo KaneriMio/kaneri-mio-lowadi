@@ -1,0 +1,6931 @@
+[
+{
+  "id": "bm_1779821220545",
+  "name": "Шика",
+  "count": 23,
+  "price": 18,
+  "image": "https://i.ibb.co/spnY40bB/compagnon-shika.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "trot": 8
+  },
+  "stocks": {
+    "🇷🇺": 23,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823106467",
+  "name": "Сколль и Хати",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/KpDSVwdg/compagnon-skoll-hati.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "speed": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823165266",
+  "name": "Плюшевый единорог",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Csw990sN/compagnon-peluche-licorne.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "stamina": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823198618",
+  "name": "Намадзу",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/5XSkWZ9p/compagnon-namazu.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "jump": 9
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823246826",
+  "name": "Грифон",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/hxTDxVJY/compagnon-griffon.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "dressage": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823284265",
+  "name": "Ow",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/sM9s1Vz/compagnon-ow.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "stamina": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823319682",
+  "name": "Kyūbiko",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/kbC6BXY/compagnon-kyubiko.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "trot": 9
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823501858",
+  "name": "Snashes",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/PGhFhDf5/compagnon-fire-sidhe-5.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823539761",
+  "name": "Lumeetle",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Vc7WYz9z/compagnon-fire-sidhe-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "trot": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823581137",
+  "name": "Lucy Flare",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/yn1CdW6C/compagnon-fire-sidhe-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "dressage": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823616489",
+  "name": "Leon Flameleon",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/mVNdnn6H/compagnon-fire-sidhe-4.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "dressage": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823656505",
+  "name": "Glow Codile",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/B5bmfqRW/compagnon-fire-sidhe-6.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "dressage": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823686864",
+  "name": "Flænix",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/JjfjVZC0/compagnon-fire-sidhe-8.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "stamina": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823717080",
+  "name": "Firennec",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Fb8DF5Td/compagnon-fire-sidhe-10.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823774016",
+  "name": "Fireball",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/HLV0ngxv/compagnon-fire-sidhe-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "jump": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779823805336",
+  "name": "Blaze",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/1fx2GM1P/compagnon-fire-sidhe-9.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Адский зверинец",
+  "bonuses": {
+    "stamina": 12
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Адский зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824088743",
+  "name": "Кошка Палуга",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/1GsTqfDp/compagnon-cat-palug.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Анимированные спутники",
+  "bonuses": {
+    "speed": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Анимированные спутники",
+   "кошка", 
+  "огненная кошка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824197583",
+  "name": "Armadilla",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/B2QD1qDP/companion-armadillo-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "dressage": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824232615",
+  "name": "Alebrijow",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XxHGrCV7/companion-alebrijow.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "stamina": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824314446",
+  "name": "Ajolote",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/FMQDNXz/companion-axolotl-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "stamina": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824363262",
+  "name": "Ajolota",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/60kMLLpd/companion-axolotl-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "stamina": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824493278",
+  "name": "Geco",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/dwk0xn6n/companion-gecko-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "gallop": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе",
+    "гекон"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824625581",
+  "name": "Geca",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/CxJXVcQ/companion-gecko-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "gallop": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе", 
+    "гекон"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824666549",
+  "name": "Delfín",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/wFPhv2Nf/companion-dauphin.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "dressage": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе", 
+    "дельфин"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824704813",
+  "name": "Cardenala",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/MDRFh7vV/companion-cardinal-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "jump": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе", 
+    "кардинал"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824762709",
+  "name": "Cardenal",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/GvYtrBmZ/companion-cardinal-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "jump": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе", 
+    "кардинал"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779824841805",
+  "name": "Armadillo",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Y7RR2FMv/companion-armadillo-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "dressage": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825106988",
+  "name": "Mapache",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/G4sjhSVn/companion-raton-laveur-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "trot": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825158756",
+  "name": "Mapacha",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/CKNvvJgN/companion-raton-laveur-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "trot": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825202499",
+  "name": "Mantarrayo",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/hRqFm9Jt/companion-raie-manta-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "jump": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825238644",
+  "name": "Mantarraya",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/h1n3ZJZ5/companion-raie-manta-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "jump": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825271408",
+  "name": "Jaguar",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/jvSZFKVf/companion-jaguar.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "speed": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825348421",
+  "name": "Iguano",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/39nVpDr2/companion-iguane-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "gallop": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825370747",
+  "name": "Iguana",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/7dHJnfZW/companion-iguane-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "gallop": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825519075",
+  "name": "Puercoespína",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/1fzFFT0F/companion-porc-epic-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "trot": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825543970",
+  "name": "Puercoespín",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/RTdrhT6y/companion-porc-epic-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "trot": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825571595",
+  "name": "Muerciélago",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XkCZBTDP/companion-chauve-souris-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "speed": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825599626",
+  "name": "Muerciélaga",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/4RGPtDN0/companion-chauve-souris-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Алебрихе",
+  "bonuses": {
+    "speed": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Алебрихе"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825922473",
+  "name": "Pudding",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XfQ871KZ/compagnon-halloween-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Призывающий фонарь",
+  "bonuses": {
+    "jump": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Призывающий фонарь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825967289",
+  "name": "Mummygnon",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/YTLbf1QH/compagnon-halloween-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Призывающий фонарь",
+  "bonuses": {
+    "speed": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Призывающий фонарь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779825998873",
+  "name": "Chonkpy",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/gZJKX6n3/compagnon-halloween-4.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Призывающий фонарь",
+  "bonuses": {
+    "trot": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Призывающий фонарь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826028049",
+  "name": "Bulby",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/zW9qd53x/compagnon-halloween-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Призывающий фонарь",
+  "bonuses": {
+    "gallop": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Призывающий фонарь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826121321",
+  "name": "Кричащее привидение",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/HD2rNmdL/compagnon-fantome-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Привидения",
+  "bonuses": {
+    "dressage": 18
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Привидения"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826146728",
+  "name": "Привидение в цепях",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XkSv2NZd/compagnon-fantome-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Привидения",
+  "bonuses": {
+    "dressage": 18
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Привидения"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826170953",
+  "name": "Гримасничающее привидение",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/1t7LS0r7/compagnon-fantome-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Привидения",
+  "bonuses": {
+    "dressage": 18
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Привидения"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826363488",
+  "name": "Кат Ши — пантера",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Xkb6TPwG/compagnon-cat-sidhe-6.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826392000",
+  "name": "Кат Ши — пампасская кошка",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/n8VQcsxy/compagnon-cat-sidhe-11.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826433896",
+  "name": "Кат Ши — манул",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/3mhNbmYT/compagnon-cat-sidhe-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826526423",
+  "name": "Кат Ши — львица",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/84rPjZfb/compagnon-cat-sidhe-13.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826554008",
+  "name": "Кат Ши — лев",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/4RPTkr29/compagnon-cat-sidhe-8.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826575783",
+  "name": "Кат Ши — кошка",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Y7nctXb8/compagnon-cat-sidhe-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826640615",
+  "name": "Кат Ши — котенок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/MkGHybF7/compagnon-cat-sidhe-9.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826666455",
+  "name": "Кат Ши — каракал",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/nNKJ8n9V/compagnon-cat-sidhe-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826697479",
+  "name": "Кат Ши — белый тигр",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/ZpfZc26T/compagnon-cat-sidhe-12.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826797102",
+  "name": "Кат Ши — ягуар",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/h1t5bsk1/compagnon-cat-sidhe-5.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826818950",
+  "name": "Кат Ши — тигр",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/C3B3wMm6/compagnon-cat-sidhe-7.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826840886",
+  "name": "Кат Ши — рысь",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Jwhj4vxv/compagnon-cat-sidhe-4.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779826866342",
+  "name": "Кат Ши — перс",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/chypGRGw/compagnon-cat-sidhe-10.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Кат Ши",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Кат Ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779995518509",
+  "name": "Феникс",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/5WLFyXCZ/compagnon-phenix.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": true,
+  "isAvailableForNaves": true,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "dressage": 12
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779995615533",
+  "name": "Фея",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/VcVQWMnh/compagnon-fee.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Божественные существа",
+  "bonuses": {
+    "jump": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "божественные существа"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779995666989",
+  "name": "Синий дракон",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/4R4WfcsT/compagnon-dragon-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Драконы",
+  "bonuses": {
+    "dressage": 16
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Драконы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779995788460",
+  "name": "Фиолетовый дракон",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/7JWxmH4q/compagnon-dragon-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Драконы",
+  "bonuses": {
+    "dressage": 16
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Драконы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779995819964",
+  "name": "Красный дракон",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/9BbYRCg/compagnon-dragon-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Драконы",
+  "bonuses": {
+    "dressage": 16
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Драконы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779995847132",
+  "name": "Зеленый дракон",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/TqkdzDrK/compagnon-dragon-4.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Драконы",
+  "bonuses": {
+    "dressage": 16
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Драконы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779995887932",
+  "name": "Дракон Аксолотль",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/DPHZgx2q/compagnon-dragon-axolotl.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Драконы",
+  "bonuses": {
+    "dressage": 16
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Драконы",
+    "Дракон",
+    "Аксолотль"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996025459",
+  "name": "Ящерок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Q4PyqtH/compagnon-kaijoon-lizard.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Мультяшные животные",
+  "bonuses": {
+    "stamina": 12
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Мультяшные животные",
+    "ящер"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996069075",
+  "name": "Крабик",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/chSLy7jb/compagnon-crabbie.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Мультяшные животные",
+  "bonuses": {
+    "speed": 11
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Мультяшные животные",
+    "краб"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996110147",
+  "name": "Імператор Мороз",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/SXqhq8s2/compagnon-emperor-penguin.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Мультяшные животные",
+  "bonuses": {
+    "trot": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Мультяшные животные",
+    "пингвин"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996163195",
+  "name": "Lil' Octopus",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/VYB9kKSQ/compagnon-poulpy.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Мультяшные животные",
+  "bonuses": {
+    "dressage": 11
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Мультяшные животные",
+    "осьминог",
+    "кальмар"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996428667",
+  "name": "Kamaitachi",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/cXLNWnHR/compagnon-kamaitachi.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "speed": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996502770",
+  "name": "Kaeru no Senshi",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Ldk2Vfh3/compagnon-kaeru-no-senshi.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "jump": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996537034",
+  "name": "Kaeru",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/G4rnR7PC/compagnon-kaeru.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "jump": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996569058",
+  "name": "Itachi",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/DH4GXFJV/compagnon-itachi.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "speed": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996613210",
+  "name": "Ezoshika",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/TDkDtpyz/compagnon-ezoshika.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "gallop": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996645777",
+  "name": "Banken",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/qYDv50ny/compagnon-banken.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "speed": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996806665",
+  "name": "Kyuubi no kitsune",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/cSX8VQdw/compagnon-kyuubi-no-kitsune.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "trot": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996837881",
+  "name": "Komainu",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/B5HgRmzL/compagnon-komainu.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "stamina": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996873624",
+  "name": "Kojika",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XrhJCMSx/compagnon-kojika.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "gallop": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996918953",
+  "name": "Koi",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/bMkJzzqs/compagnon-koi.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "trot": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996957921",
+  "name": "Kitsune",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/R4Sk9VFm/compagnon-kitsune.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "trot": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779996986224",
+  "name": "Kingyo",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Fbgv2LQ3/compagnon-kingyo.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "trot": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997130720",
+  "name": "Shiba Inu",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/K1mfNmz/compagnon-shiba-inu.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "speed": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997174232",
+  "name": "Ryū",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/JWGwnsTL/compagnon-ryu.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "stamina": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997203232",
+  "name": "Okuri Inu",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/gLLCd34H/compagnon-okuri-inu.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "jump": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997233336",
+  "name": "Ōkami",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/YB3j9xfF/compagnon-okami.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "jump": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997277591",
+  "name": "Nekomata",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/0R0FyWQQ/compagnon-nekomata.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "stamina": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997315967",
+  "name": "Neko",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/dw6Bc6xm/compagnon-neko.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "stamina": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997471223",
+  "name": "Tsuru",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/pjyRGhx2/compagnon-tsuru.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "gallop": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997557351",
+  "name": "Tsuchinoko",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XkGj95DK/compagnon-tsuchinoko.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "speed": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997588582",
+  "name": "Tora",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/RGGnhWft/compagnon-tora.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "stamina": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997618950",
+  "name": "Tengu",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/SXb4FvGW/compagnon-tengu.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "gallop": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779997646102",
+  "name": "Sown Goku",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/NnN3r110/compagnon-sown-goku.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Дарумы",
+  "bonuses": {
+    "gallop": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Дарумы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998418124",
+  "name": "Silksnow",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/6csJCQHq/compagnon-ice-sidhe-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "stamina": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998472804",
+  "name": "Post Owl",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/zTzJmJbK/compagnon-ice-sidhe-5.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "stamina": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998501060",
+  "name": "Penglide",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Nn3ySzH4/compagnon-ice-sidhe-6.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "gallop": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998539596",
+  "name": "M.Ice",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/21p1pPwB/compagnon-ice-sidhe-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "trot": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998567259",
+  "name": "Icy Seal",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/M5BHb4Xr/compagnon-ice-sidhe-8.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "jump": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998589172",
+  "name": "Frostbun",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/PvySN6G8/compagnon-ice-sidhe-4.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "jump": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998614259",
+  "name": "Coldfish",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/hJwZtp46/compagnon-ice-sidhe-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "gallop": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998659635",
+  "name": "Buffalow",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/99q4c7BJ/compagnon-ice-sidhe-9.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "speed": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998690491",
+  "name": "Beeeeell",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Rp7mjK2T/compagnon-ice-sidhe-7.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Зимний зверинец",
+  "bonuses": {
+    "trot": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Зимний зверинец"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998842955",
+  "name": "Сенбернар — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/wZg3VYBZ/compagnon-cu-sidhe-8.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "stamina": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998872043",
+  "name": "Немецкий дог — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/HLrQ83Qy/compagnon-cu-sidhe-7.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "stamina": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998935315",
+  "name": "Корги пемброк — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/99vnDQP3/compagnon-cu-sidhe-9.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "trot": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779998966747",
+  "name": "Кокер-спаниель — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/21vWDxnZ/compagnon-cu-sidhe-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "jump": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999000802",
+  "name": "Бордер-колли — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/rGKRDxX1/compagnon-cu-sidhe-4.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "jump": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999037786",
+  "name": "Американский стафф терьер — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/7d4mZdjF/compagnon-cu-sidhe-10.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999284585",
+  "name": "Шарпей — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/bMy1Wb2k/compagnon-cu-sidhe-5.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "jump": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999309113",
+  "name": "Чихуахуа — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/RTK3b1zW/compagnon-cu-sidhe-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "trot": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999331522",
+  "name": "Скотчтерьер — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/C3bBHYTh/compagnon-cu-sidhe-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "trot": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999361529",
+  "name": "Сибирский хаски — ку ши",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/m5FjWTL6/compagnon-cu-sidhe-6.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Ку ши",
+  "bonuses": {
+    "stamina": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Ку ши"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999659032",
+  "name": "Морская черепаха",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/JRdGmM1C/compagnon-sea-turtle.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "stamina": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999735432",
+  "name": "Медуза",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XxzZ9vN9/compagnon-jellyfish.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "gallop": 5
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999783048",
+  "name": "Кузовок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/27y3VLVB/compagnon-cow-fish.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "stamina": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999845080",
+  "name": "Криль",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/TBhX2WW3/compagnon-krill.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "trot": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999884272",
+  "name": "Краб",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/3yLZCwD9/compagnon-crab.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "trot": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999909280",
+  "name": "Гиппокампус",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/7J2M92Tf/compagnon-seahorse.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "gallop": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1779999998719",
+  "name": "Спрут",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/wZQwKHMP/compagnon-giant-squid.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "trot": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000033455",
+  "name": "Рыба-хирург",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/pBnZdYP2/compagnon-surgeon-fish.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "gallop": 7
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000079663",
+  "name": "Рыба-лев",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/chdD0kMP/compagnon-lion-fish.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "speed": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000108887",
+  "name": "Рыба-клоун",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/WpKbn3m8/compagnon-clownfish.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Морские пиньяты",
+  "bonuses": {
+    "jump": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Морские пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000300038",
+  "name": "Курчавый арасари",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/SwR3cZbc/compagnon-pinata-curl-crested-aracari.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "stamina": 5
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000328135",
+  "name": "Колибри",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/zVjR0K4r/compagnon-pinata-colibri.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "dressage": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000357535",
+  "name": "Кардинал",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/xVFvSv2/compagnon-pinata-cardinal.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "trot": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000390086",
+  "name": "Каракара",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/BV4HZ9Dp/compagnon-pinata-caracara.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "speed": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000415390",
+  "name": "Гульдова амадина",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/zV7kZfF3/compagnon-pinata-gouldian-finch.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "jump": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000441854",
+  "name": "Великолепный фрегат",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/HpMRrwf5/compagnon-pinata-magnificent-frigate-bird.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "speed": 7
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000510622",
+  "name": "Скальный петушок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/KzshyjZT/compagnon-pinata-cock-of-the-rock.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "gallop": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780000531758",
+  "name": "Попугайчик",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/JR5rftGr/compagnon-pinata-parakeet.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "gallop": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780002381408",
+  "name": "Попугай",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/m5qDdDbG/compagnon-pinata-parrot.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "trot": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780002406472",
+  "name": "Пиньята с фениксом",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/F43khwh9/compagnon-pinata-phenix.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Небесные пиньяты",
+  "bonuses": {
+    "stamina": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Небесные пиньяты"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780235955710",
+  "name": "Criatura",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XZ4qD3Qp/compagnon-monstre-14.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236101077",
+  "name": "Creatuur",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/LXqFw8D0/compagnon-monstre-12.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236124421",
+  "name": "Créature",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Pvkb3SnQ/compagnon-monstre-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236147628",
+  "name": "Creature",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/fYJYDYc1/compagnon-monstre-5.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236174309",
+  "name": "Beast",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/4g8gL9h3/compagnon-monstre-6.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236296652",
+  "name": "@Mowster",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/4HwVtBG/compagnon-monstre-28.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236509012",
+  "name": "Monstre",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/PvpkzT6S/compagnon-monstre-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236534988",
+  "name": "Monster",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/gb9bV70b/compagnon-monstre-4.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236558652",
+  "name": "Kreatur",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/5X8cfhCh/compagnon-monstre-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236579595",
+  "name": "Hirviö",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Gv98hXMc/compagnon-monstre-19.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236727379",
+  "name": "Fiend",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/pjTK0zqy/compagnon-monstre-8.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780236747339",
+  "name": "Critter",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/sJMyd1j9/compagnon-monstre-7.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237061714",
+  "name": "Netvor",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/fV1L6WxK/compagnon-monstre-18.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237081402",
+  "name": "Mostro",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/274pdV8f/compagnon-monstre-16.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237127050",
+  "name": "Monstruo",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/CshC5mPc/compagnon-monstre-9.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237148201",
+  "name": "monštrum",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/x8Yz9HCF/compagnon-monstre-26.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237177706",
+  "name": "Monstru",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/ccRrH6n8/compagnon-monstre-24.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237196546",
+  "name": "Monstro",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/sYg4GhX/compagnon-monstre-13.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237341254",
+  "name": "Varelse",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/zY43qwj/compagnon-monstre-21.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237755256",
+  "name": "Uhyre",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/kVMb75tx/compagnon-monstre-15.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237779048",
+  "name": "Szörnyeteg",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/1fFYTgqk/compagnon-monstre-23.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237801376",
+  "name": "Skapning",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/x8hvTqnY/compagnon-monstre-20.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237824712",
+  "name": "Potwór",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/wF7qs1hk/compagnon-monstre-17.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237845048",
+  "name": "Pošast",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Pp9WBCm/compagnon-monstre-25.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780237953232",
+  "name": "وحش",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/5WX7pgWm/compagnon-monstre-11.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780238039879",
+  "name": "מִפלֶצֶת",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/dJgKT5zk/compagnon-monstre-22.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780238061536",
+  "name": "Чудовище",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/nq9nFk2J/compagnon-monstre-10.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780238083991",
+  "name": "Чудище",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/wh6YmNWB/compagnon-monstre-27.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Монстры",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Монстры"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780238348703",
+  "name": "Пиньята «Крокодил»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/603Ljq9j/compagnon-pinata-crocodile.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "speed": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780238373438",
+  "name": "Пиньята «Зефир»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/0yMB0Qz6/compagnon-pinata-zephyrus.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "trot": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780238407574",
+  "name": "Пиньята «Деллинг»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/v6v4gKWC/compagnon-pinata-delling.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "gallop": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780238444726",
+  "name": "Пиньята «Ваниль»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/jkc2xTLg/compagnon-pinata-vanilla.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "jump": 7
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780238892925",
+  "name": "Пиньята «Бурый карлик»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/m5KgC9st/compagnon-pinata-brown-dwarf.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "jump": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780239144620",
+  "name": "Пиньята «Secret Rainbow»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/84TKTVT9/compagnon-pinata-secret-rainbow.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "stamina": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780239678403",
+  "name": "Пиньята «Янтарь»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/kFhLfjP/compagnon-pinata-amber.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "dressage": 5
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780239703066",
+  "name": "Пиньята «Эвридика»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/bM4X5MNm/compagnon-pinata-eurydice.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "stamina": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780239734050",
+  "name": "Пиньята «Тангароа»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/KpMp3SNb/compagnon-pinata-tangaroa.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "trot": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780239789218",
+  "name": "Пиньята «Сыроежка»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/YF6Cypny/compagnon-pinata-russula.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Особая лошадь — пиньята",
+  "bonuses": {
+    "speed": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Особая лошадь — пиньята",
+    "Особая лошадь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780243370983",
+  "name": "Пиньята «Морская выдра»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/ZzFPQYf3/compagnon-pinata-sea-otter.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "gallop": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780243406687",
+  "name": "Пиньята «Морж»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/zVxCr1N9/compagnon-pinata-walrus.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "trot": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780243574047",
+  "name": "Пиньята «Ламантин»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/QFWB9y4x/compagnon-pinata-manatee.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "trot": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780243601462",
+  "name": "Пиньята «Косатка»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/35CpvbVK/compagnon-pinata-orca.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "jump": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780243630615",
+  "name": "Пиньята «Кашалот»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/YFCchmvL/compagnon-pinata-cachalot.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "stamina": 7
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780243735174",
+  "name": "Пиньята «Белуга»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/ZRRF9PPk/compagnon-pinata-beluga.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "stamina": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244135141",
+  "name": "Пиньята «Ушастый тюлень»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XxMsGZBN/compagnon-pinata-sea-lion.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "dressage": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244175861",
+  "name": "Пиньята «Синий кит»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/zTCmFpHZ/compagnon-pinata-blue-whale.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "jump": 5
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244232725",
+  "name": "Пиньята «Речной дельфин»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/q3sY6h76/compagnon-pinata-boto.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "gallop": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244261228",
+  "name": "Пиньята «Нарвал»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/hx40GJ62/compagnon-pinata-narwhal.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты «Морские млекопитающие»",
+  "bonuses": {
+    "speed": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты «Морские млекопитающие»",
+    "Морские млекопитающие"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244375060",
+  "name": "Пиньята «Кускус»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/MkcKgyL7/compagnon-pinata-cuscus.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "trot": 7
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244424172",
+  "name": "Пиньята «Кроличий бандикут»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/xq3yzzCF/compagnon-pinata-bilby.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "speed": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244647515",
+  "name": "Пиньята «Коала»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/Q3fnXprG/compagnon-pinata-koala.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "trot": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244675427",
+  "name": "Пиньята «Квокка»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/xqZ6Tdfh/compagnon-pinata-quokka.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "stamina": 4
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244705643",
+  "name": "Пиньята «Вомбат»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/5hPQrpJg/compagnon-pinata-wombat.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "gallop": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244727195",
+  "name": "Пиньята «Валлаби»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/F4GGkmgn/compagnon-pinata-wallaby.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "dressage": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244874947",
+  "name": "Пиньята «Утконос»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/zVsL69PX/compagnon-pinata-platypus.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "jump": 14
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244900891",
+  "name": "Пиньята «Тасманский дьявол»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/mrhttKYD/compagnon-pinata-tasmanian-devil.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "speed": 5
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244929315",
+  "name": "Пиньята «Сахарная сумчатая летяга»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/s9GbBKyN/compagnon-pinata-sugar-glider.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "jump": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780244969707",
+  "name": "Пиньята «Опоссум»",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/YFwDQYy4/compagnon-pinata-possum.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Пиньяты из Океании",
+  "bonuses": {
+    "stamina": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Пиньята",
+    "Пиньяты из Океании",
+    "Океания"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780245918512",
+  "name": "Исполин",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/tkgbV5R/compagnon-shark-sidhe-9.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "dressage": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780245943855",
+  "name": "Годкулла",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/qLDzF44H/compagnon-shark-sidhe-7.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "jump": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780245971879",
+  "name": "Бразильская светящаяся акула",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/d4hj9479/compagnon-shark-sidhe-1.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246002704",
+  "name": "Большой папочка",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/pF1tJmw/compagnon-shark-sidhe-4.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "trot": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246029023",
+  "name": "Большая белая акула",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/TBscwpQ2/compagnon-shark-sidhe-3.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "trot": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246053791",
+  "name": "Акула-привидение",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/7JjdhGKj/compagnon-shark-sidhe-6.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246137935",
+  "name": "Рифовая акула",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/7NS6M3XQ/compagnon-shark-sidhe-2.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "speed": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246161592",
+  "name": "Огненная акула",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/B5hSS1Gw/compagnon-shark-sidhe-5.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "gallop": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246199223",
+  "name": "Магмакулла",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/xSx5XQkB/compagnon-shark-sidhe-8.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Фантастические акулы",
+  "bonuses": {
+    "stamina": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Фантастические акулы",
+    "акулы"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246781405",
+  "name": "Горностай",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/B2CD84Qk/compagnon-hermine.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "stamina": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246808821",
+  "name": "Верблюд",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/W4tD0qwC/compagnon-chameau.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246851285",
+  "name": "Божья коровка",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/SX914y7P/compagnon-coccinelle.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 9
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246882797",
+  "name": "Бельчонок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/m5gSdNg6/compagnon-ecureuil.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "Белка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246906486",
+  "name": "Бабочка",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/xK9Ly8Pc/compagnon-papillon.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780246955277",
+  "name": "Акита-ину",
+  "count": 0,
+  "price": 10,
+  "image": "https://i.ibb.co/cKSSPSwk/compagnon-akita-inu.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "stamina": 11
+  },
+  "stocks": {
+    "🇷🇺": 24,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "Хатико",
+    "хатико",
+    "Акита ину"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780247130188",
+  "name": "Кенгуру",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/sJXwrPzQ/compagnon-kangourou.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780247203828",
+  "name": "Зебра",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/gLBXprvn/compagnon-zebre.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780247276500",
+  "name": "Жираф",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/20j6QGp8/compagnon-girafe.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780247315891",
+  "name": "Ёж",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/rf5z2mVZ/compagnon-herisson.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "trot": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "рысь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780247358379",
+  "name": "Дикий вепрь",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/MDxWXPs4/compagnon-sanglier.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "speed": 12
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "кабан",
+    "скорость",
+    "Скорость"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780247421275",
+  "name": "Гризли",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/nsZkThz0/compagnon-grizzly.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "stamina": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "медведь",
+    "выносливость",
+    "Выносливость"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248471456",
+  "name": "Лама",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/vx0FG1Sb/compagnon-lama.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248501018",
+  "name": "Курица",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/vxn0fpcW/compagnon-poule.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 1
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248537640",
+  "name": "Кролик",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/DH9F5MdN/compagnon-lapin.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248559592",
+  "name": "Котенок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/4nKHbb4L/compagnon-chat.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 9
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248578944",
+  "name": "Косатка",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/DfyCRCNk/compagnon-orque.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248609024",
+  "name": "Козленок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/TDmYKNry/compagnon-chevre.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 2
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "козёл",
+    "коза"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248758799",
+  "name": "Обезьянка",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/ynHVfrX3/compagnon-singe.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 6
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "обезьяна"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248788967",
+  "name": "Медведь",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/DgjFQ1Fr/compagnon-ours.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 9
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "белый медведь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248825191",
+  "name": "Макао",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/C5Kq2BTQ/compagnon-ara-ailes-vertes.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "speed": 5
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "скорость",
+    "Скорость",
+    "попугай",
+    "Ара"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248862663",
+  "name": "Лягушонок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/4G60M5y/compagnon-grenouille.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 12
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "лягушка",
+    "жаба"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248902607",
+  "name": "Лиса",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/g2cDzyy/compagnon-renard.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "jump": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "прыжки",
+    "Прыжки"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780248936495",
+  "name": "Ласточка",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/XZDzggXT/compagnon-hirondelle.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 5
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "птица"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249025438",
+  "name": "Сова",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/ynGcD3ND/compagnon-hibou.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 13
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "птица"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249097534",
+  "name": "Снежная обезьяна",
+  "count": 0,
+  "price": 15,
+  "image": "https://i.ibb.co/dqV8Qms/compagnon-singe-neige.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "jump": 12
+  },
+  "stocks": {
+    "🇷🇺": 15,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "Прыжки",
+    "прыжки",
+    "обезьяна"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249134446",
+  "name": "Пчела",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/LDLbL6hH/compagnon-abeille.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "насекомые"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249179310",
+  "name": "Поросенок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/KpR307sn/compagnon-pig.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "stamina": 18
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выносливость",
+    "Выносливость",
+    "свинья"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249207462",
+  "name": "Пингвин",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/9d6WX5M/compagnon-pingouin.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249239150",
+  "name": "Панда",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/nM7w9D3D/compagnon-panda.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "trot": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "рысь",
+    "медведь"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249326573",
+  "name": "Щенок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/GvM0fW5D/compagnon-chien.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 15
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "собака"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249354549",
+  "name": "Ягненок",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/fVhKYm6p/compagnon-mouton.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 8
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "барашка",
+    "баран",
+    "овца"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249379925",
+  "name": "Черепаха",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/LXNs4dqc/compagnon-tortue.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 10
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249405437",
+  "name": "Уэта",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/ksLS1rJt/compagnon-weta.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "dressage": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "выездка",
+    "Выездка",
+    "насекомое",
+    "таракан"
+  ],
+  "adminIcons": []
+},
+  {
+  "id": "bm_1780249435957",
+  "name": "Страус",
+  "count": 0,
+  "price": 0,
+  "image": "https://i.ibb.co/pjH7Gbyv/compagnon-autruche.png",
+  "category": "Спутники",
+  "isNew": false,
+  "isHot": false,
+  "isRare": false,
+  "description": "",
+  "howto": "",
+  "isNaves": false,
+  "isAvailableForNaves": false,
+  "collection": "Животные",
+  "bonuses": {
+    "speed": 3
+  },
+  "stocks": {
+    "🇷🇺": 0,
+    "🇺🇳": 0,
+    "🇪🇦": 0,
+    "🇫🇷": 0
+  },
+  "keywords": [
+    "Животные",
+    "скорость",
+    "Скорость",
+    "птица"
+  ],
+  "adminIcons": []
+}
+]
